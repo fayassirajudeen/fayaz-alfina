@@ -1,621 +1,1156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Fayaz & Alfina | Wedding Invitation</title>
 
-<meta name="description" content="Fayaz & Alfina Wedding Invitation - 13 June 2027">
+<meta name="description"
+      content="Fayaz & Alfina Wedding Invitation - 13 June 2027">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
 
 <style>
 
-/* =========================
-   BASIC
-========================= */
+/* =====================================================
+   GENERAL
+===================================================== */
 
 :root {
-  --cream: #f8f3ea;
-  --cream2: #eee3d2;
-  --gold: #b88b48;
-  --gold2: #d8bb83;
-  --dark: #211a15;
-  --brown: #49382b;
+
+  --cream: #f7f1e7;
+  --cream-dark: #eadbc5;
+  --gold: #b88a45;
+  --gold-light: #d8bb82;
+  --brown: #4b3829;
+  --dark: #211913;
   --white: #ffffff;
+
 }
 
 * {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html {
+
   scroll-behavior: smooth;
+
 }
 
 body {
+
   background: var(--cream);
   color: var(--brown);
+
   font-family: "Montserrat", sans-serif;
+
   overflow-x: hidden;
+
 }
 
 section {
+
   position: relative;
-  padding: 100px 20px;
+
+  padding:
+    100px 20px;
+
 }
 
 .container {
+
   width: min(1100px, 100%);
+
   margin: auto;
+
   text-align: center;
+
 }
 
 .section-tag {
+
   color: var(--gold);
+
   font-size: 10px;
+
   letter-spacing: 4px;
+
   text-transform: uppercase;
+
   margin-bottom: 15px;
+
 }
 
 .section-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 7vw, 5rem);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(3rem, 7vw, 5rem);
+
   font-weight: 500;
+
   line-height: 1;
+
 }
 
 .divider {
+
   width: 75px;
+
   height: 1px;
+
   background: var(--gold);
+
   margin: 25px auto;
+
 }
 
 
-/* =========================
-   OPENING
-========================= */
+/* =====================================================
+   OPENING SCREEN
+===================================================== */
 
 #opening {
+
   position: fixed;
+
   inset: 0;
+
   z-index: 9999;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   text-align: center;
 
   background:
+
     radial-gradient(
       circle at 20% 20%,
-      rgba(216,187,131,.18),
+      rgba(216,187,130,.18),
       transparent 35%
     ),
+
     radial-gradient(
       circle at 80% 80%,
-      rgba(184,139,72,.15),
+      rgba(184,138,69,.18),
       transparent 35%
     ),
+
     linear-gradient(
       135deg,
-      #211a15,
-      #403024,
-      #211a15
+      #211913,
+      #403025,
+      #211913
     );
 
-  transition: opacity 1s ease, visibility 1s ease;
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+
 }
 
 #opening.hide {
+
   opacity: 0;
+
   visibility: hidden;
+
 }
 
 .opening-content {
+
   width: min(700px, 90%);
+
 }
 
 .opening-arabic {
-  font-family: "Noto Naskh Arabic", serif;
+
+  font-family:
+    "Noto Naskh Arabic",
+    serif;
+
   direction: rtl;
-  color: var(--gold2);
-  font-size: clamp(2rem, 6vw, 4rem);
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    clamp(2rem, 6vw, 4rem);
+
   margin-bottom: 25px;
+
 }
 
 .opening-small {
-  color: rgba(255,255,255,.65);
+
+  color:
+    rgba(255,255,255,.65);
+
   font-size: 10px;
+
   letter-spacing: 4px;
+
   text-transform: uppercase;
+
   margin-bottom: 20px;
+
 }
 
 .opening-names {
+
   color: white;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(4rem, 12vw, 8rem);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(4rem, 12vw, 8rem);
+
   line-height: .78;
+
   font-weight: 500;
+
 }
 
 .opening-names .amp {
+
   display: block;
-  font-family: "Great Vibes", cursive;
-  color: var(--gold2);
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
+  color:
+    var(--gold-light);
+
   font-size: .55em;
+
   margin: 15px 0;
+
 }
 
 .opening-date {
-  color: var(--gold2);
+
+  color:
+    var(--gold-light);
+
   font-size: 12px;
+
   letter-spacing: 4px;
+
   margin: 35px 0;
+
 }
 
 .open-button {
-  padding: 16px 38px;
-  border: 1px solid var(--gold2);
-  background: transparent;
+
+  padding:
+    16px 38px;
+
+  border:
+    1px solid var(--gold-light);
+
+  background:
+    transparent;
+
   color: white;
-  font-family: "Montserrat", sans-serif;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
   font-size: 10px;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
+
   cursor: pointer;
+
   transition: .4s;
+
 }
 
 .open-button:hover {
-  background: var(--gold2);
-  color: var(--dark);
+
+  background:
+    var(--gold-light);
+
+  color:
+    var(--dark);
+
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
+
   min-height: 100vh;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   background:
+
     radial-gradient(
       circle at center top,
-      rgba(255,255,255,.9),
+      rgba(255,255,255,.95),
       transparent 50%
     ),
+
     linear-gradient(
       180deg,
       #faf6ef,
-      #eee3d2
+      #eee2cf
     );
+
 }
 
 .hero-content {
+
   max-width: 950px;
+
   text-align: center;
+
 }
 
 .hero-arabic {
-  font-family: "Noto Naskh Arabic", serif;
+
+  font-family:
+    "Noto Naskh Arabic",
+    serif;
+
   direction: rtl;
-  color: var(--gold);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  color:
+    var(--gold);
+
+  font-size:
+    clamp(2rem, 5vw, 3.5rem);
+
   margin-bottom: 30px;
+
 }
 
 .hero-small {
-  color: var(--gold);
-  text-transform: uppercase;
+
+  color:
+    var(--gold);
+
+  text-transform:
+    uppercase;
+
   font-size: 10px;
+
   letter-spacing: 4px;
+
   margin-bottom: 25px;
+
 }
 
 .names {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(4.5rem, 13vw, 9rem);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(4.5rem, 13vw, 9rem);
+
   font-weight: 500;
+
   line-height: .78;
+
 }
 
 .names .amp {
+
   display: block;
-  color: var(--gold);
-  font-family: "Great Vibes", cursive;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
   font-size: .55em;
+
   margin: 12px 0;
+
 }
 
 .hero-date {
+
   margin-top: 45px;
+
   font-size: 13px;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
+
 }
 
 .scroll {
+
   margin-top: 65px;
-  color: var(--gold);
+
+  color:
+    var(--gold);
+
   font-size: 25px;
-  animation: bounce 2s infinite;
+
+  animation:
+    bounce 2s infinite;
+
 }
 
 @keyframes bounce {
+
   0%,100% {
-    transform: translateY(0);
+
+    transform:
+      translateY(0);
+
   }
 
   50% {
-    transform: translateY(10px);
+
+    transform:
+      translateY(10px);
+
   }
+
 }
 
 
-/* =========================
+/* =====================================================
    MESSAGE
-========================= */
+===================================================== */
 
 .message {
-  background: white;
+
+  background:
+    white;
+
 }
 
 .message-text {
-  max-width: 750px;
-  margin: 40px auto 0;
 
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  max-width: 750px;
+
+  margin:
+    40px auto 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.5rem, 3vw, 2rem);
+
   line-height: 1.6;
+
   font-style: italic;
+
 }
 
 .signature {
+
   margin-top: 30px;
-  color: var(--gold);
-  font-family: "Great Vibes", cursive;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
   font-size: 3rem;
+
 }
 
 
-/* =========================
+/* =====================================================
    COUNTDOWN
-========================= */
+===================================================== */
 
 .countdown {
+
   background:
     linear-gradient(
-      rgba(31,24,18,.93),
-      rgba(31,24,18,.93)
-    ),
-    #2c2119;
+      rgba(31,24,18,.94),
+      rgba(31,24,18,.94)
+    );
 
-  color: white;
+  color:
+    white;
+
 }
 
 .countdown .section-title {
-  color: var(--gold2);
+
+  color:
+    var(--gold-light);
+
 }
 
 .countdown-grid {
-  width: min(800px,100%);
-  margin: 50px auto 0;
 
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+  width:
+    min(800px,100%);
+
+  margin:
+    50px auto 0;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
   gap: 15px;
+
 }
 
 .count-box {
-  border: 1px solid rgba(216,187,131,.45);
-  padding: 30px 10px;
+
+  border:
+    1px solid
+    rgba(216,187,131,.45);
+
+  padding:
+    30px 10px;
+
 }
 
 .count-number {
+
   display: block;
-  font-family: "Cormorant Garamond", serif;
-  color: var(--gold2);
-  font-size: clamp(2.5rem,6vw,4rem);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    clamp(2.5rem,6vw,4rem);
+
 }
 
 .count-label {
-  color: rgba(255,255,255,.65);
+
+  color:
+    rgba(255,255,255,.65);
+
   font-size: 9px;
+
   letter-spacing: 2px;
-  text-transform: uppercase;
+
+  text-transform:
+    uppercase;
+
 }
 
 
-/* =========================
+/* =====================================================
    EVENTS
-========================= */
+===================================================== */
 
 .events {
-  background: #f5eee3;
+
+  background:
+    #f5eee3;
+
 }
 
 .event-grid {
-  margin-top: 55px;
 
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+  margin-top:
+    55px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
   gap: 30px;
+
 }
 
 .event {
-  background: white;
-  padding: 50px 30px;
-  border-top: 2px solid var(--gold);
-  box-shadow: 0 15px 50px rgba(60,40,20,.08);
+
+  background:
+    white;
+
+  padding:
+    50px 30px;
+
+  border-top:
+    2px solid
+    var(--gold);
+
+  box-shadow:
+    0 15px 50px
+    rgba(60,40,20,.08);
+
 }
 
 .event-icon {
-  color: var(--gold);
-  font-size: 35px;
-  margin-bottom: 20px;
+
+  color:
+    var(--gold);
+
+  font-size:
+    35px;
+
+  margin-bottom:
+    20px;
+
 }
 
 .event h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 3rem;
-  font-weight: 500;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    3rem;
+
+  font-weight:
+    500;
+
 }
 
 .event-date {
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 25px;
+
+  color:
+    var(--gold);
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    2px;
+
+  text-transform:
+    uppercase;
+
+  margin-top:
+    25px;
+
 }
 
 .event-time {
-  margin-top: 10px;
+
+  margin-top:
+    10px;
+
 }
 
 .event-venue {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.6rem;
-  margin-top: 25px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.6rem;
+
+  margin-top:
+    25px;
+
 }
 
 .event-address {
-  color: #766b60;
-  font-size: 12px;
-  line-height: 1.8;
-  margin-top: 12px;
+
+  color:
+    #766b60;
+
+  font-size:
+    12px;
+
+  line-height:
+    1.8;
+
+  margin-top:
+    12px;
+
 }
 
 .map-button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 13px 22px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  text-decoration: none;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+
+  display:
+    inline-block;
+
+  margin-top:
+    25px;
+
+  padding:
+    13px 22px;
+
+  border:
+    1px solid
+    var(--gold);
+
+  color:
+    var(--gold);
+
+  text-decoration:
+    none;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    2px;
+
+  text-transform:
+    uppercase;
+
 }
 
 
-/* =========================
+/* =====================================================
    FAMILY
-========================= */
+===================================================== */
 
 .family {
-  background: white;
+
+  background:
+    white;
+
 }
 
 .family-grid {
-  margin-top: 55px;
 
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+  margin-top:
+    55px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
   gap: 50px;
+
 }
 
 .family-title {
-  color: var(--gold);
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+
+  color:
+    var(--gold);
+
+  font-size:
+    10px;
+
+  letter-spacing:
+    3px;
+
+  text-transform:
+    uppercase;
+
+  margin-bottom:
+    20px;
+
 }
 
 .family-parents {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  line-height: 1.5;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    2rem;
+
+  line-height:
+    1.5;
+
 }
 
 .family-details {
-  color: #6d6257;
-  font-size: 12px;
-  line-height: 1.9;
-  margin-top: 25px;
+
+  color:
+    #6d6257;
+
+  font-size:
+    12px;
+
+  line-height:
+    1.9;
+
+  margin-top:
+    25px;
+
 }
 
 
-/* =========================
+/* =====================================================
    QURAN
-========================= */
+===================================================== */
 
 .quote {
+
   background:
     linear-gradient(
       135deg,
       #efe2cf,
       #faf6ef
     );
+
 }
 
 .quote-arabic {
-  font-family: "Noto Naskh Arabic", serif;
-  direction: rtl;
-  color: #633b42;
-  font-size: clamp(2.5rem,7vw,5rem);
+
+  font-family:
+    "Noto Naskh Arabic",
+    serif;
+
+  direction:
+    rtl;
+
+  color:
+    #633b42;
+
+  font-size:
+    clamp(2.5rem,7vw,5rem);
+
 }
 
 .quote-text {
-  max-width: 700px;
-  margin: 25px auto 0;
 
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.6rem,3vw,2.3rem);
-  font-style: italic;
+  max-width:
+    700px;
+
+  margin:
+    25px auto 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.6rem,3vw,2.3rem);
+
+  font-style:
+    italic;
+
 }
 
 .quote-source {
-  color: var(--gold);
-  font-size: 11px;
-  margin-top: 20px;
+
+  color:
+    var(--gold);
+
+  font-size:
+    11px;
+
+  margin-top:
+    20px;
+
 }
 
 
-/* =========================
+/* =====================================================
    VENUE
-========================= */
+===================================================== */
 
 .venue {
-  background: white;
+
+  background:
+    white;
+
 }
 
 .venue-card {
-  max-width: 800px;
-  margin: 45px auto 0;
-  padding: 50px 25px;
-  border: 1px solid var(--cream2);
+
+  max-width:
+    800px;
+
+  margin:
+    45px auto 0;
+
+  padding:
+    50px 25px;
+
+  border:
+    1px solid
+    var(--cream-dark);
+
 }
 
 .venue-card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.8rem;
-  font-weight: 500;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    2.8rem;
+
+  font-weight:
+    500;
+
 }
 
 .venue-address {
-  color: #6d6257;
-  font-size: 13px;
-  line-height: 1.8;
-  margin: 20px auto 30px;
+
+  color:
+    #6d6257;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.8;
+
+  margin:
+    20px auto 30px;
+
 }
 
 .gold-button {
-  display: inline-block;
-  background: var(--gold);
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 9px;
-  letter-spacing: 2px;
+
+  display:
+    inline-block;
+
+  background:
+    var(--gold);
+
+  color:
+    white;
+
+  padding:
+    15px 25px;
+
+  text-decoration:
+    none;
+
+  text-transform:
+    uppercase;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    2px;
+
 }
 
 
-/* =========================
+/* =====================================================
    RSVP
-========================= */
+===================================================== */
 
 .rsvp {
+
   background:
     linear-gradient(
       135deg,
-      #211a15,
+      #211913,
       #3e2e23
     );
-  color: white;
+
+  color:
+    white;
+
 }
 
 .rsvp .section-title {
-  color: var(--gold2);
+
+  color:
+    var(--gold-light);
+
 }
 
 .rsvp-text {
-  max-width: 600px;
-  margin: auto;
-  color: rgba(255,255,255,.7);
-  line-height: 1.8;
-  font-size: 13px;
+
+  max-width:
+    600px;
+
+  margin:
+    auto;
+
+  color:
+    rgba(255,255,255,.7);
+
+  line-height:
+    1.8;
+
+  font-size:
+    13px;
+
 }
 
 .contact {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.2rem;
-  margin-top: 35px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    2.2rem;
+
+  margin-top:
+    35px;
+
 }
 
 .phone {
-  color: var(--gold2);
-  margin: 8px 0 30px;
+
+  color:
+    var(--gold-light);
+
+  margin:
+    8px 0 30px;
+
 }
 
 .whatsapp {
-  display: inline-block;
-  background: var(--gold);
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 9px;
-  letter-spacing: 2px;
+
+  display:
+    inline-block;
+
+  background:
+    var(--gold);
+
+  color:
+    white;
+
+  padding:
+    15px 25px;
+
+  text-decoration:
+    none;
+
+  text-transform:
+    uppercase;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    2px;
+
 }
 
 
-/* =========================
+/* =====================================================
    CALENDAR
-========================= */
+===================================================== */
 
 .calendar {
-  background: var(--cream);
+
+  background:
+    var(--cream);
+
 }
 
 .calendar-text {
-  max-width: 600px;
-  margin: auto;
-  color: #6d6257;
-  font-size: 13px;
-  line-height: 1.8;
+
+  max-width:
+    600px;
+
+  margin:
+    auto;
+
+  color:
+    #6d6257;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.8;
+
 }
 
 .calendar-button {
-  margin-top: 30px;
-  border: 0;
-  background: var(--gold);
-  color: white;
-  padding: 15px 25px;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
+
+  margin-top:
+    30px;
+
+  border:
+    0;
+
+  background:
+    var(--gold);
+
+  color:
+    white;
+
+  padding:
+    15px 25px;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    2px;
+
+  text-transform:
+    uppercase;
+
+  cursor:
+    pointer;
+
 }
 
 
-/* =========================
+/* =====================================================
    CLOSING
-========================= */
+===================================================== */
 
 .closing {
-  min-height: 70vh;
 
-  display: flex;
-  align-items: center;
+  min-height:
+    70vh;
+
+  display:
+    flex;
+
+  align-items:
+    center;
 
   background:
     linear-gradient(
@@ -623,168 +1158,268 @@ section {
       #eadbc4,
       #fff
     );
+
 }
 
 .closing-text {
-  max-width: 700px;
-  margin: auto;
 
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.8rem,4vw,3rem);
-  line-height: 1.5;
-  font-style: italic;
+  max-width:
+    700px;
+
+  margin:
+    auto;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.8rem,4vw,3rem);
+
+  line-height:
+    1.5;
+
+  font-style:
+    italic;
+
 }
 
 .closing-names {
-  margin-top: 35px;
-  color: var(--gold);
-  font-family: "Great Vibes", cursive;
-  font-size: clamp(3.5rem,8vw,6rem);
+
+  margin-top:
+    35px;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
+  font-size:
+    clamp(3.5rem,8vw,6rem);
+
 }
 
 
-/* =========================
-   MUSIC
-========================= */
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
 
 .music-button {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
 
-  width: 55px;
-  height: 55px;
+  position:
+    fixed;
 
-  border: none;
-  border-radius: 50%;
+  right:
+    20px;
 
-  background: var(--gold);
-  color: white;
+  bottom:
+    20px;
 
-  font-size: 20px;
+  width:
+    55px;
 
-  cursor: pointer;
+  height:
+    55px;
 
-  z-index: 5000;
+  border:
+    none;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--gold);
+
+  color:
+    white;
+
+  font-size:
+    20px;
+
+  cursor:
+    pointer;
+
+  z-index:
+    5000;
 
   box-shadow:
-    0 5px 25px rgba(0,0,0,.25);
+    0 5px 25px
+    rgba(0,0,0,.25);
+
 }
 
 .music-button.playing {
-  animation: musicPulse 1.4s infinite;
+
+  animation:
+    musicPulse 1.4s infinite;
+
 }
 
 @keyframes musicPulse {
 
   0%,100% {
-    transform: scale(1);
+
+    transform:
+      scale(1);
+
   }
 
   50% {
-    transform: scale(1.12);
+
+    transform:
+      scale(1.12);
+
   }
 
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
-  padding: 30px 20px;
-  text-align: center;
 
-  background: #1c1612;
+  padding:
+    30px 20px;
 
-  color: rgba(255,255,255,.5);
+  text-align:
+    center;
 
-  font-size: 9px;
-  letter-spacing: 1px;
+  background:
+    #1c1612;
+
+  color:
+    rgba(255,255,255,.5);
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    1px;
+
 }
 
 
-/* =========================
-   ANIMATION
-========================= */
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
 
 .reveal {
-  opacity: 0;
-  transform: translateY(35px);
+
+  opacity:
+    0;
+
+  transform:
+    translateY(35px);
+
   transition:
     opacity .9s ease,
     transform .9s ease;
+
 }
 
 .reveal.show {
-  opacity: 1;
-  transform: translateY(0);
+
+  opacity:
+    1;
+
+  transform:
+    translateY(0);
+
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:700px) {
 
   section {
-    padding: 75px 18px;
+
+    padding:
+      75px 18px;
+
   }
 
   .event-grid,
   .family-grid {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:
+      1fr;
+
   }
 
   .countdown-grid {
-    grid-template-columns: repeat(2,1fr);
+
+    grid-template-columns:
+      repeat(2,1fr);
+
   }
 
   .names {
-    font-size: 5rem;
+
+    font-size:
+      5rem;
+
   }
 
   .opening-names {
-    font-size: 4.8rem;
+
+    font-size:
+      4.8rem;
+
   }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     OPENING SCREEN
-========================= -->
+<!-- =====================================================
+     OPENING
+===================================================== -->
 
 <div id="opening">
 
   <div class="opening-content">
 
     <div class="opening-arabic">
+
       بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+
     </div>
 
     <div class="opening-small">
+
       Wedding Invitation
+
     </div>
 
     <div class="opening-names">
+
       Fayaz
 
-      <span class="amp">&</span>
+      <span class="amp">
+        &
+      </span>
 
       Alfina
+
     </div>
 
     <div class="opening-date">
+
       13 June 2027
+
     </div>
 
     <button
@@ -800,20 +1435,24 @@ footer {
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section class="hero">
 
   <div class="hero-content reveal">
 
     <div class="hero-arabic">
+
       بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+
     </div>
 
     <div class="hero-small">
+
       The Wedding Celebration Of
+
     </div>
 
     <h1 class="names">
@@ -831,11 +1470,15 @@ footer {
     <div class="divider"></div>
 
     <div class="hero-date">
+
       Sunday • 13 June 2027
+
     </div>
 
     <div class="scroll">
+
       ↓
+
     </div>
 
   </div>
@@ -843,20 +1486,24 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      MESSAGE
-========================= -->
+===================================================== -->
 
 <section class="message">
 
   <div class="container reveal">
 
     <div class="section-tag">
+
       With The Blessings Of Allah
+
     </div>
 
     <h2 class="section-title">
+
       Our Special Day
+
     </h2>
 
     <div class="divider"></div>
@@ -869,7 +1516,9 @@ footer {
       beautiful journey together.
 
       <div class="signature">
+
         Fayaz & Alfina
+
       </div>
 
     </div>
@@ -879,20 +1528,24 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      COUNTDOWN
-========================= -->
+===================================================== -->
 
 <section class="countdown">
 
   <div class="container reveal">
 
     <div class="section-tag">
+
       Counting The Moments
+
     </div>
 
     <h2 class="section-title">
+
       Until Our Nikah
+
     </h2>
 
     <div class="divider"></div>
@@ -900,55 +1553,80 @@ footer {
 
     <div class="countdown-grid">
 
+
       <div class="count-box">
+
         <span
           class="count-number"
           id="days">
+
           00
+
         </span>
 
         <span class="count-label">
+
           Days
+
         </span>
+
       </div>
 
 
       <div class="count-box">
+
         <span
           class="count-number"
           id="hours">
+
           00
+
         </span>
 
         <span class="count-label">
+
           Hours
+
         </span>
+
       </div>
 
 
       <div class="count-box">
+
         <span
           class="count-number"
           id="minutes">
+
           00
+
         </span>
 
         <span class="count-label">
+
           Minutes
+
         </span>
+
       </div>
 
 
       <div class="count-box">
+
         <span
           class="count-number"
           id="seconds">
+
           00
+
         </span>
 
         <span class="count-label">
+
           Seconds
+
         </span>
+
       </div>
 
     </div>
@@ -958,22 +1636,27 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      EVENTS
-========================= -->
+===================================================== -->
 
 <section class="events">
 
   <div class="container">
 
+
     <div class="reveal">
 
       <div class="section-tag">
+
         Celebrate With Us
+
       </div>
 
       <h2 class="section-title">
+
         Wedding Events
+
       </h2>
 
       <div class="divider"></div>
@@ -989,23 +1672,33 @@ footer {
       <div class="event reveal">
 
         <div class="event-icon">
+
           ✦
+
         </div>
 
         <h3>
+
           Nikah
+
         </h3>
 
         <div class="event-date">
+
           Sunday, 13 June 2027
+
         </div>
 
         <div class="event-time">
+
           11:30 AM
+
         </div>
 
         <div class="event-venue">
+
           Rajiv Gandhi Auditorium
+
         </div>
 
         <div class="event-address">
@@ -1032,23 +1725,33 @@ footer {
       <div class="event reveal">
 
         <div class="event-icon">
+
           ❀
+
         </div>
 
         <h3>
+
           Reception
+
         </h3>
 
         <div class="event-date">
+
           Sunday, 13 June 2027
+
         </div>
 
         <div class="event-time">
+
           06:00 PM
+
         </div>
 
         <div class="event-venue">
+
           Majestic Ceremonials
+
         </div>
 
         <div class="event-address">
@@ -1077,22 +1780,27 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FAMILY
-========================= -->
+===================================================== -->
 
 <section class="family">
 
   <div class="container">
 
+
     <div class="reveal">
 
       <div class="section-tag">
+
         With The Love & Blessings Of
+
       </div>
 
       <h2 class="section-title">
+
         Our Families
+
       </h2>
 
       <div class="divider"></div>
@@ -1103,18 +1811,22 @@ footer {
     <div class="family-grid">
 
 
-      <!-- GROOM -->
+      <!-- GROOM FAMILY -->
 
       <div class="reveal">
 
         <div class="family-title">
+
           Groom's Family
+
         </div>
 
         <div class="family-parents">
 
           P.K Sirajudeen<br>
+
           &<br>
+
           Nasriya Sirajudeen
 
         </div>
@@ -1124,7 +1836,8 @@ footer {
           Grandson of<br><br>
 
           <strong>
-            (Late) P.K Kader & (Late) Nafeesa Kader
+            (Late) P.K Kader &
+            (Late) Nafeesa Kader
           </strong>
 
           <br>
@@ -1151,18 +1864,22 @@ footer {
       </div>
 
 
-      <!-- BRIDE -->
+      <!-- BRIDE FAMILY -->
 
       <div class="reveal">
 
         <div class="family-title">
+
           Bride's Family
+
         </div>
 
         <div class="family-parents">
 
           K.M Salim<br>
+
           &<br>
+
           Ayisha Beevi Salim
 
         </div>
@@ -1206,28 +1923,36 @@ footer {
 </section>
 
 
-<!-- =========================
-     QURAN VERSE
-========================= -->
+<!-- =====================================================
+     QURAN
+===================================================== -->
 
 <section class="quote">
 
   <div class="container reveal">
 
     <div class="section-tag">
+
       The Holy Quran
+
     </div>
 
     <div class="quote-arabic">
+
       وَخَلَقْنَاكُمْ أَزْوَاجًا
+
     </div>
 
     <div class="quote-text">
+
       “And We created you in pairs.”
+
     </div>
 
     <div class="quote-source">
+
       القرآن الكريم | Surah An-Naba 78:8
+
     </div>
 
   </div>
@@ -1235,22 +1960,27 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      VENUE
-========================= -->
+===================================================== -->
 
 <section class="venue">
 
   <div class="container">
 
+
     <div class="reveal">
 
       <div class="section-tag">
+
         Join Us
+
       </div>
 
       <h2 class="section-title">
+
         Venue Details
+
       </h2>
 
       <div class="divider"></div>
@@ -1261,11 +1991,15 @@ footer {
     <div class="venue-card reveal">
 
       <div class="section-tag">
+
         Nikah Ceremony
+
       </div>
 
       <h3>
+
         Rajiv Gandhi Auditorium
+
       </h3>
 
       <div class="venue-address">
@@ -1290,11 +2024,15 @@ footer {
     <div class="venue-card reveal">
 
       <div class="section-tag">
+
         Reception
+
       </div>
 
       <h3>
+
         Majestic Ceremonials
+
       </h3>
 
       <div class="venue-address">
@@ -1321,20 +2059,24 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      RSVP
-========================= -->
+===================================================== -->
 
 <section class="rsvp">
 
   <div class="container reveal">
 
     <div class="section-tag">
+
       Kindly Confirm Your Presence
+
     </div>
 
     <h2 class="section-title">
+
       RSVP
+
     </h2>
 
     <div class="divider"></div>
@@ -1348,11 +2090,15 @@ footer {
     </div>
 
     <div class="contact">
+
       PK Nishab
+
     </div>
 
     <div class="phone">
+
       +91 79024 40748
+
     </div>
 
     <a
@@ -1369,20 +2115,24 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CALENDAR
-========================= -->
+===================================================== -->
 
 <section class="calendar">
 
   <div class="container reveal">
 
     <div class="section-tag">
+
       Save The Date
+
     </div>
 
     <h2 class="section-title">
+
       13 June 2027
+
     </h2>
 
     <div class="divider"></div>
@@ -1393,8 +2143,6 @@ footer {
       celebrate this beautiful day with us.
 
     </div>
-
-    <br>
 
     <button
       class="calendar-button"
@@ -1409,9 +2157,9 @@ footer {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CLOSING
-========================= -->
+===================================================== -->
 
 <section class="closing">
 
@@ -1426,13 +2174,17 @@ footer {
     </div>
 
     <div class="closing-names">
+
       Fayaz & Alfina
+
     </div>
 
     <div class="divider"></div>
 
     <div class="section-tag">
+
       13 June 2027
+
     </div>
 
   </div>
@@ -1447,9 +2199,9 @@ footer {
 </footer>
 
 
-<!-- =========================
+<!-- =====================================================
      MUSIC BUTTON
-========================= -->
+===================================================== -->
 
 <button
   id="musicButton"
@@ -1461,23 +2213,22 @@ footer {
 </button>
 
 
-<!-- =========================
-     AUDIO FILE
-========================= -->
+<!-- =====================================================
+     MUSIC FILE
+===================================================== -->
 
 <audio
   id="weddingMusic"
   src="./wedding-music.mp3"
-  preload="auto"
-  loop>
+  preload="auto">
 </audio>
 
 
 <script>
 
-/* =========================
+/* =====================================================
    OPEN INVITATION
-========================= */
+===================================================== */
 
 function openInvitation() {
 
@@ -1488,9 +2239,10 @@ function openInvitation() {
 }
 
 
-/* =========================
+/* =====================================================
    COUNTDOWN
-========================= */
+   13 JUNE 2027 - 11:00 AM INDIA TIME
+===================================================== */
 
 const weddingDate =
   new Date("2027-06-13T11:00:00+05:30").getTime();
@@ -1507,10 +2259,17 @@ function countdown() {
 
   if (difference <= 0) {
 
-    document.getElementById("days").innerText = "00";
-    document.getElementById("hours").innerText = "00";
-    document.getElementById("minutes").innerText = "00";
-    document.getElementById("seconds").innerText = "00";
+    document.getElementById("days").innerText =
+      "00";
+
+    document.getElementById("hours").innerText =
+      "00";
+
+    document.getElementById("minutes").innerText =
+      "00";
+
+    document.getElementById("seconds").innerText =
+      "00";
 
     return;
 
@@ -1565,12 +2324,15 @@ function countdown() {
 
 countdown();
 
-setInterval(countdown,1000);
+setInterval(
+  countdown,
+  1000
+);
 
 
-/* =========================
-   SCROLL ANIMATION
-========================= */
+/* =====================================================
+   SCROLL ANIMATIONS
+===================================================== */
 
 const revealItems =
   document.querySelectorAll(".reveal");
@@ -1580,15 +2342,19 @@ const observer =
   new IntersectionObserver(
     function(entries) {
 
-      entries.forEach(function(entry) {
+      entries.forEach(
+        function(entry) {
 
-        if (entry.isIntersecting) {
+          if (entry.isIntersecting) {
 
-          entry.target.classList.add("show");
+            entry.target
+              .classList
+              .add("show");
+
+          }
 
         }
-
-      });
+      );
 
     },
     {
@@ -1597,74 +2363,180 @@ const observer =
   );
 
 
-revealItems.forEach(function(item) {
+revealItems.forEach(
+  function(item) {
 
-  observer.observe(item);
+    observer.observe(item);
 
-});
+  }
+);
 
 
-/* =========================
+/* =====================================================
    MUSIC
-========================= */
+   ONLY PLAYS FROM 00:04 TO 00:36
+===================================================== */
 
 const music =
-  document.getElementById("weddingMusic");
+  document.getElementById(
+    "weddingMusic"
+  );
+
 
 const musicButton =
-  document.getElementById("musicButton");
+  document.getElementById(
+    "musicButton"
+  );
+
 
 let playing = false;
 
 
+/*
+   START = 4 seconds
+   END   = 36 seconds
+*/
+
+const musicStart = 4;
+
+const musicEnd = 36;
+
+
+/* =====================================================
+   PLAY / PAUSE
+===================================================== */
+
 function toggleMusic() {
+
 
   if (!playing) {
 
+
+    /*
+       Start exactly at 00:04
+    */
+
+    music.currentTime =
+      musicStart;
+
+
     music.play()
+
       .then(function() {
+
 
         playing = true;
 
-        musicButton.innerHTML = "♫";
 
-        musicButton.classList.add("playing");
+        musicButton.innerHTML =
+          "♫";
+
+
+        musicButton
+          .classList
+          .add("playing");
+
 
       })
+
+
       .catch(function(error) {
 
-        console.log(error);
+
+        console.log(
+          "Music error:",
+          error
+        );
+
 
         alert(
-          "Music could not start. Please tap the button again."
+          "Please tap the music button again."
         );
+
 
       });
 
+
   }
+
 
   else {
 
+
     music.pause();
+
 
     playing = false;
 
-    musicButton.innerHTML = "♪";
 
-    musicButton.classList.remove("playing");
+    musicButton.innerHTML =
+      "♪";
+
+
+    musicButton
+      .classList
+      .remove("playing");
+
 
   }
 
 }
 
 
-/* =========================
+/* =====================================================
+   STOP AT 00:36
+===================================================== */
+
+music.addEventListener(
+  "timeupdate",
+  function() {
+
+
+    if (
+      music.currentTime >=
+      musicEnd
+    ) {
+
+
+      music.pause();
+
+
+      /*
+         Reset to 00:04
+         for the next play
+      */
+
+      music.currentTime =
+        musicStart;
+
+
+      playing = false;
+
+
+      musicButton.innerHTML =
+        "♪";
+
+
+      musicButton
+        .classList
+        .remove("playing");
+
+
+    }
+
+  }
+);
+
+
+/* =====================================================
    ADD TO CALENDAR
-========================= */
+===================================================== */
 
 function addCalendar() {
 
+
   const event =
+
 `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Fayaz & Alfina//Wedding//EN
@@ -1684,7 +2556,8 @@ END:VCALENDAR`;
     new Blob(
       [event],
       {
-        type: "text/calendar;charset=utf-8"
+        type:
+          "text/calendar;charset=utf-8"
       }
     );
 
@@ -1697,23 +2570,35 @@ END:VCALENDAR`;
     document.createElement("a");
 
 
-  link.href = url;
+  link.href =
+    url;
+
 
   link.download =
     "Fayaz-Alfina-Wedding.ics";
 
 
-  document.body.appendChild(link);
+  document.body.appendChild(
+    link
+  );
+
 
   link.click();
 
-  document.body.removeChild(link);
 
-  URL.revokeObjectURL(url);
+  document.body.removeChild(
+    link
+  );
+
+
+  URL.revokeObjectURL(
+    url
+  );
 
 }
 
 </script>
 
 </body>
+
 </html>
