@@ -13,2072 +13,2029 @@
 
 <style>
 
-/* =====================================================
-   BASIC
-===================================================== */
+/* =========================================================
+   ORIGINAL LUXURY COLOUR PALETTE
+========================================================= */
 
 :root {
-  --cream:#f8f2e8;
-  --cream2:#eee0cc;
-  --gold:#b58a4b;
-  --gold-light:#dec28d;
-  --brown:#4c392a;
-  --dark:#211914;
-  --white:#ffffff;
+    --ivory: #f7f0e5;
+    --ivory-light: #fbf7f0;
+    --cream: #eee1cf;
+
+    --gold: #b18a54;
+    --gold-light: #d5ba87;
+
+    --brown: #594536;
+    --brown-dark: #2d2119;
+
+    --white: #ffffff;
 }
 
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
-  background:var(--cream);
-  color:var(--brown);
-  font-family:"Montserrat",sans-serif;
+    margin: 0;
+    background: var(--ivory);
+    color: var(--brown);
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
 }
 
 img {
-  max-width:100%;
+    max-width: 100%;
 }
 
-section {
-  width:100%;
-  position:relative;
-  padding:100px 20px;
-}
-
-.container {
-  width:min(1050px,100%);
-  margin:0 auto;
-  text-align:center;
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 
-/* =====================================================
+/* =========================================================
    OPENING SCREEN
-===================================================== */
+========================================================= */
 
 #opening {
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100vh;
-  height:100dvh;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
 
-  z-index:99999;
+    z-index: 99999;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  text-align:center;
+    text-align: center;
 
-  /*
-     LIGHTER TRANSPARENCY
-     Floral image is now much more visible
-  */
+    /*
+       IMPORTANT:
+       This is deliberately transparent so the
+       floral background remains visible.
+    */
 
-  background:
-    linear-gradient(
-      rgba(25,18,13,.48),
-      rgba(25,18,13,.60)
-    ),
-    url("./wedding-floral.jpg");
+    background:
+        linear-gradient(
+            rgba(42, 31, 23, 0.46),
+            rgba(42, 31, 23, 0.58)
+        ),
+        url("./wedding-floral.jpg");
 
-  background-size:cover;
-  background-position:center;
+    background-size: cover;
+    background-position: center center;
 
-  transition:
-    opacity 1s ease,
-    visibility 1s ease;
+    transition:
+        opacity 1.1s ease,
+        visibility 1.1s ease;
 }
 
 #opening.hide {
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .opening-content {
-  width:min(800px,92%);
-  margin:auto;
-  padding:20px;
+    width: min(850px, 92%);
+    padding: 20px;
 }
 
-.opening-arabic {
-  direction:rtl;
+.opening-bismillah {
+    direction: rtl;
 
-  font-family:"Noto Naskh Arabic",serif;
+    font-family: "Noto Naskh Arabic", serif;
 
-  color:var(--gold-light);
+    color: #e1c693;
 
-  font-size:clamp(1.8rem,5vw,3.5rem);
+    font-size: clamp(1.7rem, 5vw, 3rem);
 
-  line-height:1.5;
+    line-height: 1.6;
 
-  margin-bottom:15px;
+    margin-bottom: 12px;
 }
 
-.opening-small {
-  color:rgba(255,255,255,.78);
+.opening-label {
+    color: rgba(255,255,255,.75);
 
-  font-size:9px;
+    font-size: 8px;
 
-  letter-spacing:4px;
+    letter-spacing: 4px;
 
-  text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 .opening-names {
-  margin-top:20px;
+    margin-top: 20px;
 
-  color:white;
+    color: #fff;
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:clamp(4rem,12vw,8rem);
+    font-size: clamp(4.3rem, 12vw, 8rem);
 
-  font-weight:500;
+    font-weight: 500;
 
-  line-height:.78;
+    line-height: .78;
 }
 
 .opening-names .amp {
-  display:block;
+    display: block;
 
-  color:var(--gold-light);
+    margin: 18px 0;
 
-  font-family:"Great Vibes",cursive;
+    color: #d9bb84;
 
-  font-size:.55em;
+    font-family: "Great Vibes", cursive;
 
-  line-height:1;
+    font-size: .55em;
 
-  margin:18px 0;
+    line-height: 1;
 }
 
 .opening-date {
-  color:var(--gold-light);
+    margin-top: 38px;
 
-  font-size:10px;
+    color: #dfc38d;
 
-  letter-spacing:4px;
+    font-size: 9px;
 
-  margin:35px 0;
+    letter-spacing: 4px;
 }
 
 .open-button {
-  border:1px solid rgba(222,194,141,.9);
+    margin-top: 30px;
 
-  background:rgba(255,255,255,.05);
+    padding: 14px 34px;
 
-  color:white;
+    background: rgba(255,255,255,.04);
 
-  padding:15px 35px;
+    border: 1px solid rgba(220,193,143,.85);
 
-  font-size:9px;
+    color: white;
 
-  letter-spacing:3px;
+    font-family: "Montserrat", sans-serif;
 
-  text-transform:uppercase;
+    font-size: 8px;
 
-  cursor:pointer;
+    letter-spacing: 3px;
 
-  transition:.4s;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .35s ease;
 }
 
 .open-button:hover {
-  background:var(--gold-light);
-  color:var(--dark);
+    background: rgba(213,186,135,.9);
+
+    color: #2d2119;
 }
 
 
-/* =====================================================
-   COMMON
-===================================================== */
+/* =========================================================
+   COMMON SECTION
+========================================================= */
 
-.section-tag {
-  color:var(--gold);
+section {
+    position: relative;
 
-  font-size:9px;
+    width: 100%;
 
-  letter-spacing:4px;
+    padding: 95px 20px;
+}
 
-  text-transform:uppercase;
+.container {
+    width: min(1000px, 100%);
 
-  margin-bottom:15px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.section-label {
+    color: var(--gold);
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 13px;
 }
 
 .section-title {
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:clamp(3rem,7vw,5rem);
+    font-size: clamp(3rem, 7vw, 5.2rem);
 
-  font-weight:500;
+    font-weight: 500;
 
-  line-height:1.05;
+    line-height: 1;
 }
 
 .divider {
-  width:70px;
-  height:1px;
+    width: 65px;
 
-  margin:24px auto;
+    height: 1px;
 
-  background:var(--gold);
+    margin: 23px auto;
+
+    background: var(--gold);
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
-  min-height:100vh;
-  min-height:100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    display: flex;
 
-  background:
-    linear-gradient(
-      rgba(248,242,232,.66),
-      rgba(248,242,232,.82)
-    ),
-    url("./wedding-floral.jpg");
+    align-items: center;
+    justify-content: center;
 
-  background-size:cover;
-  background-position:center;
+    background:
+        linear-gradient(
+            rgba(247,240,229,.65),
+            rgba(247,240,229,.78)
+        ),
+        url("./wedding-floral.jpg");
+
+    background-size: cover;
+
+    background-position: center;
 }
 
 .hero-content {
-  width:min(950px,100%);
+    width: min(950px,100%);
 }
 
-.hero-arabic {
-  direction:rtl;
+.hero-bismillah {
+    direction: rtl;
 
-  font-family:"Noto Naskh Arabic",serif;
+    font-family: "Noto Naskh Arabic", serif;
 
-  color:var(--gold);
+    color: var(--gold);
 
-  font-size:clamp(1.8rem,5vw,3.3rem);
+    font-size: clamp(1.8rem,5vw,3.2rem);
 
-  margin-bottom:25px;
+    margin-bottom: 25px;
 }
 
-.hero-small {
-  color:var(--gold);
+.hero-label {
+    color: var(--gold);
 
-  font-size:9px;
+    font-size: 8px;
 
-  letter-spacing:4px;
+    letter-spacing: 4px;
 
-  text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 .names {
-  margin-top:20px;
+    margin-top: 20px;
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:clamp(4.2rem,12vw,9rem);
+    font-size: clamp(4.3rem,12vw,9rem);
 
-  font-weight:500;
+    font-weight: 500;
 
-  line-height:.78;
+    line-height: .78;
 }
 
 .names .amp {
-  display:block;
+    display: block;
 
-  color:var(--gold);
+    margin: 15px 0;
 
-  font-family:"Great Vibes",cursive;
+    color: var(--gold);
 
-  font-size:.55em;
+    font-family: "Great Vibes", cursive;
 
-  line-height:1;
-
-  margin:15px 0;
+    font-size: .55em;
 }
 
 .hero-date {
-  font-size:11px;
+    margin-top: 30px;
 
-  letter-spacing:3px;
+    font-size: 9px;
 
-  text-transform:uppercase;
+    letter-spacing: 3px;
 
-  margin-top:30px;
+    color: var(--brown);
 }
 
-.scroll {
-  margin-top:55px;
+.scroll-down {
+    margin-top: 50px;
 
-  color:var(--gold);
+    color: var(--gold);
 
-  font-size:25px;
+    font-size: 23px;
 
-  animation:bounce 2s infinite;
+    animation: floating 2s infinite;
 }
 
-@keyframes bounce {
-  0%,100% {
-    transform:translateY(0);
-  }
+@keyframes floating {
 
-  50% {
-    transform:translateY(9px);
-  }
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
 }
 
 
-/* =====================================================
+/* =========================================================
    COUPLE PHOTO
-===================================================== */
+========================================================= */
 
-.couple-photo {
-  background:
-    linear-gradient(
-      #fffdf9,
-      #f1e5d3
-    );
+.photo-section {
+    background: var(--ivory-light);
 
-  overflow:hidden;
+    overflow: hidden;
 }
 
-.couple-photo::before {
-  content:"❀";
+.photo-frame {
+    position: relative;
 
-  position:absolute;
+    width: min(510px, 92vw);
 
-  left:5%;
-  top:12%;
+    margin: 40px auto 0;
 
-  color:rgba(181,138,75,.18);
+    padding: 10px;
 
-  font-size:85px;
+    background: #fff;
 
-  transform:rotate(-20deg);
+    border: 1px solid var(--gold-light);
+
+    box-shadow:
+        0 18px 55px rgba(67,47,30,.13);
 }
 
-.couple-photo::after {
-  content:"❀";
+.photo-frame:after {
+    content: "";
 
-  position:absolute;
+    position: absolute;
 
-  right:5%;
-  bottom:12%;
+    inset: 6px;
 
-  color:rgba(181,138,75,.18);
+    border: 1px solid rgba(177,138,84,.45);
 
-  font-size:85px;
-
-  transform:rotate(20deg);
+    pointer-events: none;
 }
 
-.couple-frame {
-  position:relative;
+.photo-frame img {
+    display: block;
 
-  width:min(500px,92vw);
+    width: 100%;
 
-  margin:40px auto 0;
+    aspect-ratio: 4 / 5;
 
-  padding:11px;
-
-  background:white;
-
-  border:1px solid var(--gold-light);
-
-  box-shadow:
-    0 20px 60px rgba(70,45,20,.16);
+    object-fit: cover;
 }
 
-.couple-frame::before {
-  content:"";
+.photo-caption {
+    margin-top: 25px;
 
-  position:absolute;
+    color: var(--gold);
 
-  inset:6px;
+    font-family: "Great Vibes", cursive;
 
-  border:1px solid rgba(181,138,75,.45);
-
-  pointer-events:none;
-
-  z-index:2;
-}
-
-.couple-frame img {
-  display:block;
-
-  width:100%;
-
-  aspect-ratio:4/5;
-
-  object-fit:cover;
-}
-
-.couple-caption {
-  margin-top:25px;
-
-  color:var(--gold);
-
-  font-family:"Great Vibes",cursive;
-
-  font-size:2.2rem;
+    font-size: 2.2rem;
 }
 
 
-/* =====================================================
+/* =========================================================
    MESSAGE
-===================================================== */
+========================================================= */
 
 .message {
-  background:white;
+    background: white;
 }
 
-.message-text {
-  width:min(750px,100%);
+.message-copy {
+    width: min(750px,100%);
 
-  margin:35px auto 0;
+    margin: 35px auto 0;
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:clamp(1.45rem,3vw,2rem);
+    font-size: clamp(1.45rem,3vw,2rem);
 
-  line-height:1.65;
+    line-height: 1.65;
 
-  font-style:italic;
+    font-style: italic;
 }
 
 .signature {
-  margin-top:25px;
+    margin-top: 25px;
 
-  color:var(--gold);
+    color: var(--gold);
 
-  font-family:"Great Vibes",cursive;
+    font-family: "Great Vibes", cursive;
 
-  font-size:3rem;
+    font-size: 3rem;
 }
 
 
-/* =====================================================
+/* =========================================================
    COUNTDOWN
-===================================================== */
+========================================================= */
 
 .countdown {
-  background:
-    linear-gradient(
-      rgba(33,25,20,.96),
-      rgba(33,25,20,.96)
-    );
+    background: #2d2119;
 
-  color:white;
+    color: white;
 }
 
 .countdown .section-title {
-  color:var(--gold-light);
+    color: var(--gold-light);
 }
 
 .countdown-grid {
-  width:min(800px,100%);
+    width: min(820px,100%);
 
-  margin:45px auto 0;
+    margin: 45px auto 0;
 
-  display:grid;
+    display: grid;
 
-  grid-template-columns:repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
 
-  gap:12px;
+    gap: 12px;
 }
 
 .count-box {
-  min-width:0;
+    padding: 24px 8px;
 
-  padding:25px 8px;
-
-  border:1px solid rgba(222,194,141,.45);
+    border: 1px solid rgba(213,186,135,.45);
 }
 
 .count-number {
-  display:block;
+    display: block;
 
-  color:var(--gold-light);
+    color: var(--gold-light);
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:clamp(2.4rem,6vw,4rem);
+    font-size: clamp(2.5rem,6vw,4rem);
 }
 
 .count-label {
-  color:rgba(255,255,255,.65);
+    color: rgba(255,255,255,.62);
 
-  font-size:8px;
+    font-size: 7px;
 
-  letter-spacing:2px;
+    letter-spacing: 2px;
 
-  text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 
-/* =====================================================
+/* =========================================================
    EVENTS
-===================================================== */
+========================================================= */
 
 .events {
-  background:#f5eee3;
+    background: #f3e8d8;
 }
 
 .event-grid {
-  width:min(950px,100%);
+    width: min(950px,100%);
 
-  margin:50px auto 0;
+    margin: 45px auto 0;
 
-  display:grid;
+    display: grid;
 
-  grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
 
-  gap:25px;
+    gap: 25px;
 }
 
-.event {
-  min-width:0;
+.event-card {
+    background: white;
 
-  background:white;
+    padding: 42px 25px;
 
-  padding:45px 25px;
+    border-top: 2px solid var(--gold);
 
-  border-top:2px solid var(--gold);
-
-  box-shadow:
-    0 12px 40px rgba(60,40,20,.08);
+    box-shadow:
+        0 12px 40px rgba(60,40,20,.07);
 }
 
-.event-icon {
-  color:var(--gold);
+.event-symbol {
+    color: var(--gold);
 
-  font-size:30px;
+    font-size: 27px;
 
-  margin-bottom:15px;
+    margin-bottom: 12px;
 }
 
-.event h3 {
-  font-family:"Cormorant Garamond",serif;
+.event-card h3 {
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:2.8rem;
+    font-size: 2.7rem;
 
-  font-weight:500;
+    font-weight: 500;
 }
 
 .event-date {
-  color:var(--gold);
+    margin-top: 18px;
 
-  font-size:10px;
+    color: var(--gold);
 
-  letter-spacing:2px;
+    font-size: 9px;
 
-  text-transform:uppercase;
+    letter-spacing: 2px;
 
-  margin-top:20px;
+    text-transform: uppercase;
 }
 
 .event-time {
-  margin-top:8px;
+    margin-top: 7px;
 
-  font-size:13px;
+    font-size: 12px;
 }
 
-.event-venue {
-  margin-top:22px;
+.event-place {
+    margin-top: 20px;
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:1.55rem;
+    font-size: 1.55rem;
 }
 
 .event-address {
-  margin-top:10px;
+    margin-top: 9px;
 
-  color:#766b60;
+    color: #74695e;
 
-  font-size:11px;
+    font-size: 10px;
 
-  line-height:1.8;
+    line-height: 1.8;
 }
 
-.map-button {
-  display:inline-block;
+.map-link {
+    display: inline-block;
 
-  margin-top:22px;
+    margin-top: 20px;
 
-  padding:12px 20px;
+    padding: 11px 19px;
 
-  border:1px solid var(--gold);
+    border: 1px solid var(--gold);
 
-  color:var(--gold);
+    color: var(--gold);
 
-  text-decoration:none;
+    text-decoration: none;
 
-  font-size:8px;
+    font-size: 7px;
 
-  letter-spacing:2px;
+    letter-spacing: 2px;
 
-  text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 
-/* =====================================================
+/* =========================================================
    FAMILY
-===================================================== */
+========================================================= */
 
 .family {
-  background:white;
+    background: white;
 }
 
 .family-grid {
-  width:min(950px,100%);
+    width: min(950px,100%);
 
-  margin:50px auto 0;
+    margin: 48px auto 0;
 
-  display:grid;
+    display: grid;
 
-  grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
 
-  gap:45px;
+    gap: 45px;
 }
 
-.family-title {
-  color:var(--gold);
+.family-label {
+    color: var(--gold);
 
-  font-size:9px;
+    font-size: 8px;
 
-  letter-spacing:3px;
+    letter-spacing: 3px;
 
-  text-transform:uppercase;
-
-  margin-bottom:18px;
+    text-transform: uppercase;
 }
 
 .family-parents {
-  font-family:"Cormorant Garamond",serif;
+    margin-top: 18px;
 
-  font-size:1.9rem;
+    font-family: "Cormorant Garamond", serif;
 
-  line-height:1.5;
+    font-size: 1.9rem;
+
+    line-height: 1.45;
 }
 
 .family-details {
-  margin-top:20px;
+    margin-top: 20px;
 
-  color:#6d6257;
+    color: #71655a;
 
-  font-size:11px;
+    font-size: 10px;
 
-  line-height:1.9;
+    line-height: 1.9;
 }
 
 
-/* =====================================================
+/* =========================================================
    QURAN
-===================================================== */
+========================================================= */
 
 .quote {
-  background:
-    linear-gradient(
-      135deg,
-      #efe2cf,
-      #faf6ef
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #efe1cf,
+            #faf5ed
+        );
 }
 
 .quote-arabic {
-  direction:rtl;
+    direction: rtl;
 
-  font-family:"Noto Naskh Arabic",serif;
+    color: #6c4148;
 
-  color:#633b42;
+    font-family: "Noto Naskh Arabic", serif;
 
-  font-size:clamp(2.4rem,7vw,5rem);
+    font-size: clamp(2.3rem,7vw,5rem);
 
-  line-height:1.4;
+    line-height: 1.45;
 }
 
-.quote-text {
-  width:min(700px,100%);
+.quote-english {
+    width: min(700px,100%);
 
-  margin:20px auto 0;
+    margin: 18px auto 0;
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:clamp(1.5rem,3vw,2.2rem);
+    font-size: clamp(1.5rem,3vw,2.2rem);
 
-  line-height:1.5;
-
-  font-style:italic;
+    font-style: italic;
 }
 
 .quote-source {
-  color:var(--gold);
+    margin-top: 15px;
 
-  font-size:10px;
+    color: var(--gold);
 
-  margin-top:18px;
+    font-size: 9px;
 }
 
 
-/* =====================================================
+/* =========================================================
    VENUE
-===================================================== */
+========================================================= */
 
 .venue {
-  background:white;
+    background: white;
 }
 
 .venue-card {
-  width:min(800px,100%);
+    width: min(800px,100%);
 
-  margin:35px auto 0;
+    margin: 30px auto;
 
-  padding:40px 25px;
+    padding: 38px 25px;
 
-  border:1px solid var(--cream2);
+    border: 1px solid #eadcc8;
 }
 
 .venue-card h3 {
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:2.7rem;
+    font-size: 2.6rem;
 
-  font-weight:500;
+    font-weight: 500;
 }
 
 .venue-address {
-  color:#6d6257;
+    margin: 17px auto 22px;
 
-  font-size:11px;
+    color: #71655a;
 
-  line-height:1.8;
+    font-size: 10px;
 
-  margin:18px auto 25px;
+    line-height: 1.8;
 }
 
 .gold-button {
-  display:inline-block;
+    display: inline-block;
 
-  background:var(--gold);
+    padding: 13px 22px;
 
-  color:white;
+    background: var(--gold);
 
-  padding:14px 23px;
+    color: white;
 
-  text-decoration:none;
+    text-decoration: none;
 
-  font-size:8px;
+    font-size: 7px;
 
-  letter-spacing:2px;
+    letter-spacing: 2px;
 
-  text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 
-/* =====================================================
+/* =========================================================
    RSVP
-===================================================== */
+========================================================= */
 
 .rsvp {
-  background:
-    linear-gradient(
-      135deg,
-      #211913,
-      #3e2e23
-    );
+    background: #30231b;
 
-  color:white;
+    color: white;
 }
 
 .rsvp .section-title {
-  color:var(--gold-light);
+    color: var(--gold-light);
 }
 
-.rsvp-text {
-  width:min(600px,100%);
+.rsvp-copy {
+    width: min(600px,100%);
 
-  margin:auto;
+    margin: auto;
 
-  color:rgba(255,255,255,.7);
+    color: rgba(255,255,255,.68);
 
-  font-size:12px;
+    font-size: 11px;
 
-  line-height:1.8;
+    line-height: 1.9;
 }
 
-.contact {
-  margin-top:30px;
+.contact-name {
+    margin-top: 28px;
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:2.1rem;
+    font-size: 2rem;
 }
 
-.phone {
-  color:var(--gold-light);
+.contact-number {
+    margin: 7px 0 23px;
 
-  margin:8px 0 25px;
+    color: var(--gold-light);
 }
 
-.whatsapp {
-  display:inline-block;
+.whatsapp-button {
+    display: inline-block;
 
-  background:var(--gold);
+    padding: 14px 24px;
 
-  color:white;
+    background: var(--gold);
 
-  padding:14px 24px;
+    color: white;
 
-  text-decoration:none;
+    text-decoration: none;
 
-  font-size:8px;
+    font-size: 7px;
 
-  letter-spacing:2px;
+    letter-spacing: 2px;
 
-  text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 
-/* =====================================================
+/* =========================================================
    CALENDAR
-===================================================== */
+========================================================= */
 
 .calendar {
-  background:var(--cream);
+    background: var(--ivory);
 }
 
-.calendar-text {
-  width:min(600px,100%);
+.calendar-copy {
+    width: min(600px,100%);
 
-  margin:auto;
+    margin: auto;
 
-  color:#6d6257;
+    color: #706458;
 
-  font-size:12px;
+    font-size: 11px;
 
-  line-height:1.8;
+    line-height: 1.8;
 }
 
 .calendar-button {
-  margin-top:25px;
+    margin-top: 22px;
 
-  border:0;
+    padding: 13px 23px;
 
-  background:var(--gold);
+    border: 0;
 
-  color:white;
+    background: var(--gold);
 
-  padding:14px 24px;
+    color: white;
 
-  font-size:8px;
+    font-family: "Montserrat", sans-serif;
 
-  letter-spacing:2px;
+    font-size: 7px;
 
-  text-transform:uppercase;
+    letter-spacing: 2px;
 
-  cursor:pointer;
+    text-transform: uppercase;
+
+    cursor: pointer;
 }
 
 
-/* =====================================================
+/* =========================================================
    CLOSING
-===================================================== */
+========================================================= */
 
 .closing {
-  min-height:70vh;
+    min-height: 70vh;
 
-  display:flex;
+    display: flex;
 
-  align-items:center;
+    align-items: center;
 
-  background:
-    linear-gradient(
-      rgba(234,219,196,.70),
-      rgba(255,255,255,.84)
-    ),
-    url("./wedding-floral.jpg");
+    background:
+        linear-gradient(
+            rgba(247,240,229,.60),
+            rgba(247,240,229,.73)
+        ),
+        url("./wedding-floral.jpg");
 
-  background-size:cover;
+    background-size: cover;
 
-  background-position:center;
+    background-position: center;
 }
 
-.closing-text {
-  width:min(700px,100%);
+.closing-copy {
+    width: min(700px,100%);
 
-  margin:auto;
+    margin: auto;
 
-  font-family:"Cormorant Garamond",serif;
+    font-family: "Cormorant Garamond", serif;
 
-  font-size:clamp(1.7rem,4vw,3rem);
+    font-size: clamp(1.7rem,4vw,3rem);
 
-  line-height:1.5;
+    line-height: 1.5;
 
-  font-style:italic;
+    font-style: italic;
 }
 
 .closing-names {
-  margin-top:30px;
+    margin-top: 30px;
 
-  color:var(--gold);
+    color: var(--gold);
 
-  font-family:"Great Vibes",cursive;
+    font-family: "Great Vibes", cursive;
 
-  font-size:clamp(3.4rem,8vw,6rem);
+    font-size: clamp(3.4rem,8vw,6rem);
 }
 
 
-/* =====================================================
-   MUSIC BUTTON
-===================================================== */
+/* =========================================================
+   MUSIC
+========================================================= */
 
 .music-button {
-  position:fixed;
+    position: fixed;
 
-  right:18px;
-  bottom:18px;
+    right: 18px;
+    bottom: 18px;
 
-  width:52px;
-  height:52px;
+    width: 52px;
+    height: 52px;
 
-  border:0;
-  border-radius:50%;
+    z-index: 10000;
 
-  background:var(--gold);
+    border: 0;
 
-  color:white;
+    border-radius: 50%;
 
-  font-size:19px;
+    background: var(--gold);
 
-  cursor:pointer;
+    color: white;
 
-  z-index:10000;
+    font-size: 18px;
 
-  box-shadow:
-    0 5px 25px rgba(0,0,0,.25);
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.25);
 }
 
 .music-button.playing {
-  animation:musicPulse 1.4s infinite;
+    animation: musicPulse 1.4s infinite;
 }
 
 @keyframes musicPulse {
 
-  0%,100% {
-    transform:scale(1);
-  }
+    0%,100% {
+        transform: scale(1);
+    }
 
-  50% {
-    transform:scale(1.1);
-  }
-
+    50% {
+        transform: scale(1.09);
+    }
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-  padding:28px 15px;
-
-  text-align:center;
-
-  background:#1c1612;
-
-  color:rgba(255,255,255,.5);
-
-  font-size:8px;
-
-  letter-spacing:1px;
-}
-
-
-/* =====================================================
-   ANIMATION
-===================================================== */
+/* =========================================================
+   REVEAL
+========================================================= */
 
 .reveal {
-  opacity:0;
+    opacity: 0;
 
-  transform:translateY(25px);
+    transform: translateY(25px);
 
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
 }
 
 .reveal.show {
-  opacity:1;
+    opacity: 1;
 
-  transform:translateY(0);
+    transform: translateY(0);
 }
 
 
-/* =====================================================
-   MOBILE FIXES
-===================================================== */
+/* =========================================================
+   FOOTER
+========================================================= */
 
-@media(max-width:700px) {
+footer {
+    padding: 27px 15px;
 
-  section {
-    padding:75px 16px;
-  }
+    text-align: center;
 
-  .opening-content {
-    padding:10px;
-  }
+    background: #201711;
 
-  .opening-names {
-    font-size:4.6rem;
-  }
+    color: rgba(255,255,255,.48);
 
-  .opening-date {
-    margin:28px 0;
-  }
+    font-size: 7px;
 
-  .hero {
-    min-height:100svh;
-  }
-
-  .names {
-    font-size:4.7rem;
-  }
-
-  .countdown-grid {
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
-  }
-
-  .event-grid,
-  .family-grid {
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-
-  .event {
-    padding:38px 20px;
-  }
-
-  .family-grid {
-    gap:45px;
-  }
-
-  .venue-card {
-    padding:35px 18px;
-  }
-
-  .venue-card h3 {
-    font-size:2.3rem;
-  }
-
-  .couple-frame {
-    width:min(430px,92vw);
-  }
-
-  .music-button {
-    right:15px;
-    bottom:15px;
-  }
-
-}
-
-@media(max-width:380px) {
-
-  .opening-names {
-    font-size:4rem;
-  }
-
-  .names {
-    font-size:4.1rem;
-  }
-
-  .section-title {
-    font-size:2.8rem;
-  }
-
+    letter-spacing: 1px;
 }
 
 
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-button,
-a {
-  -webkit-tap-highlight-color:transparent;
+@media (max-width: 700px) {
+
+    section {
+        padding: 75px 16px;
+    }
+
+    .opening-names {
+        font-size: 4.7rem;
+    }
+
+    .names {
+        font-size: 4.8rem;
+    }
+
+    .countdown-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .family-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .photo-frame {
+        width: min(430px,92vw);
+    }
+
+    .music-button {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .opening-names {
+        font-size: 4rem;
+    }
+
+    .names {
+        font-size: 4.1rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
 }
 
 </style>
 </head>
 
-
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      OPENING
-===================================================== -->
+========================================================= -->
 
 <div id="opening">
 
-  <div class="opening-content">
+    <div class="opening-content">
 
-    <div class="opening-arabic">
-      بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+        <div class="opening-bismillah">
+            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+        </div>
+
+        <div class="opening-label">
+            Wedding Invitation
+        </div>
+
+        <div class="opening-names">
+            Fayaz
+            <span class="amp">&</span>
+            Alfina
+        </div>
+
+        <div class="opening-date">
+            13 JUNE 2027
+        </div>
+
+        <button
+            class="open-button"
+            onclick="openInvitation()">
+
+            Open Invitation
+
+        </button>
+
     </div>
-
-    <div class="opening-small">
-      Wedding Invitation
-    </div>
-
-    <div class="opening-names">
-      Fayaz
-      <span class="amp">&</span>
-      Alfina
-    </div>
-
-    <div class="opening-date">
-      13 JUNE 2027
-    </div>
-
-    <button
-      class="open-button"
-      onclick="openInvitation()">
-      Open Invitation
-    </button>
-
-  </div>
 
 </div>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section class="hero">
 
-  <div class="hero-content reveal">
+    <div class="hero-content reveal">
 
-    <div class="hero-arabic">
-      بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+        <div class="hero-bismillah">
+            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+        </div>
+
+        <div class="hero-label">
+            The Wedding Celebration Of
+        </div>
+
+        <div class="names">
+            Fayaz
+            <span class="amp">&</span>
+            Alfina
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="hero-date">
+            SUNDAY • 13 JUNE 2027
+        </div>
+
+        <div class="scroll-down">
+            ↓
+        </div>
+
     </div>
-
-    <div class="hero-small">
-      The Wedding Celebration Of
-    </div>
-
-    <h1 class="names">
-      Fayaz
-      <span class="amp">&</span>
-      Alfina
-    </h1>
-
-    <div class="divider"></div>
-
-    <div class="hero-date">
-      SUNDAY • 13 JUNE 2027
-    </div>
-
-    <div class="scroll">
-      ↓
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
-     COUPLE PHOTO
-===================================================== -->
+<!-- =========================================================
+     COUPLE
+========================================================= -->
 
-<section class="couple-photo">
+<section class="photo-section">
 
-  <div class="container reveal">
+    <div class="container reveal">
 
-    <div class="section-tag">
-      Together With Love
+        <div class="section-label">
+            Together With Love
+        </div>
+
+        <div class="section-title">
+            Fayaz & Alfina
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="photo-frame">
+
+            <img
+                src="./couple.jpg.png"
+                alt="Fayaz and Alfina">
+
+        </div>
+
+        <div class="photo-caption">
+            Two hearts, one beautiful journey
+        </div>
+
     </div>
-
-    <h2 class="section-title">
-      Fayaz & Alfina
-    </h2>
-
-    <div class="divider"></div>
-
-    <div class="couple-frame">
-
-      <img
-        src="./couple.jpg.png"
-        alt="Fayaz & Alfina">
-
-    </div>
-
-    <div class="couple-caption">
-      Two hearts, one beautiful journey
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      MESSAGE
-===================================================== -->
+========================================================= -->
 
 <section class="message">
 
-  <div class="container reveal">
+    <div class="container reveal">
 
-    <div class="section-tag">
-      With The Blessings Of Allah
+        <div class="section-label">
+            With The Blessings Of Allah
+        </div>
+
+        <div class="section-title">
+            Our Special Day
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="message-copy">
+
+            With the blessings of Allah Almighty and
+            together with our beloved families, we
+            joyfully invite you to join us as we celebrate
+            the beginning of our beautiful journey together.
+
+            <div class="signature">
+                Fayaz & Alfina
+            </div>
+
+        </div>
+
     </div>
-
-    <h2 class="section-title">
-      Our Special Day
-    </h2>
-
-    <div class="divider"></div>
-
-    <div class="message-text">
-
-      With the blessings of Allah Almighty and together
-      with our beloved families, we joyfully invite you
-      to join us as we celebrate the beginning of our
-      beautiful journey together.
-
-      <div class="signature">
-        Fayaz & Alfina
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      COUNTDOWN
-===================================================== -->
+========================================================= -->
 
 <section class="countdown">
 
-  <div class="container reveal">
+    <div class="container reveal">
 
-    <div class="section-tag">
-      Counting The Moments
+        <div class="section-label">
+            Counting The Moments
+        </div>
+
+        <div class="section-title">
+            Until Our Nikah
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="countdown-grid">
+
+            <div class="count-box">
+                <span
+                    class="count-number"
+                    id="days">00</span>
+
+                <span class="count-label">
+                    Days
+                </span>
+            </div>
+
+            <div class="count-box">
+                <span
+                    class="count-number"
+                    id="hours">00</span>
+
+                <span class="count-label">
+                    Hours
+                </span>
+            </div>
+
+            <div class="count-box">
+                <span
+                    class="count-number"
+                    id="minutes">00</span>
+
+                <span class="count-label">
+                    Minutes
+                </span>
+            </div>
+
+            <div class="count-box">
+                <span
+                    class="count-number"
+                    id="seconds">00</span>
+
+                <span class="count-label">
+                    Seconds
+                </span>
+            </div>
+
+        </div>
+
     </div>
-
-    <h2 class="section-title">
-      Until Our Nikah
-    </h2>
-
-    <div class="divider"></div>
-
-    <div class="countdown-grid">
-
-      <div class="count-box">
-        <span class="count-number" id="days">00</span>
-        <span class="count-label">Days</span>
-      </div>
-
-      <div class="count-box">
-        <span class="count-number" id="hours">00</span>
-        <span class="count-label">Hours</span>
-      </div>
-
-      <div class="count-box">
-        <span class="count-number" id="minutes">00</span>
-        <span class="count-label">Minutes</span>
-      </div>
-
-      <div class="count-box">
-        <span class="count-number" id="seconds">00</span>
-        <span class="count-label">Seconds</span>
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      EVENTS
-===================================================== -->
+========================================================= -->
 
 <section class="events">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="reveal">
+        <div class="reveal">
 
-      <div class="section-tag">
-        Celebrate With Us
-      </div>
+            <div class="section-label">
+                Celebrate With Us
+            </div>
 
-      <h2 class="section-title">
-        Wedding Events
-      </h2>
+            <div class="section-title">
+                Wedding Events
+            </div>
 
-      <div class="divider"></div>
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="event-grid">
+
+
+            <!-- NIKAH -->
+
+            <div class="event-card reveal">
+
+                <div class="event-symbol">
+                    ✦
+                </div>
+
+                <h3>
+                    Nikah
+                </h3>
+
+                <div class="event-date">
+                    Sunday, 13 June 2027
+                </div>
+
+                <div class="event-time">
+                    11:30 AM
+                </div>
+
+                <div class="event-place">
+                    Rajiv Gandhi Auditorium
+                </div>
+
+                <div class="event-address">
+
+                    39FH+XJH, Edathala,<br>
+                    Kerala 683561, India
+
+                </div>
+
+                <a
+                    class="map-link"
+                    href="https://maps.app.goo.gl/3jDQjPtPhLpJuaWC7"
+                    target="_blank">
+
+                    Google Maps
+
+                </a>
+
+            </div>
+
+
+            <!-- RECEPTION -->
+
+            <div class="event-card reveal">
+
+                <div class="event-symbol">
+                    ❀
+                </div>
+
+                <h3>
+                    Reception
+                </h3>
+
+                <div class="event-date">
+                    Sunday, 13 June 2027
+                </div>
+
+                <div class="event-time">
+                    06:00 PM
+                </div>
+
+                <div class="event-place">
+                    Majestic Ceremonials
+                </div>
+
+                <div class="event-address">
+
+                    Talikulam, Thrissur<br>
+                    Koprakalam Juma Masjid Road,<br>
+                    Triprayar, Kerala 680566, India
+
+                </div>
+
+                <a
+                    class="map-link"
+                    href="https://maps.app.goo.gl/PEcVvMqr8K4uTsKs6"
+                    target="_blank">
+
+                    Google Maps
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="event-grid">
-
-
-      <!-- NIKAH -->
-
-      <div class="event reveal">
-
-        <div class="event-icon">✦</div>
-
-        <h3>Nikah</h3>
-
-        <div class="event-date">
-          Sunday, 13 June 2027
-        </div>
-
-        <div class="event-time">
-          11:30 AM
-        </div>
-
-        <div class="event-venue">
-          Rajiv Gandhi Auditorium
-        </div>
-
-        <div class="event-address">
-          39FH+XJH, Edathala,<br>
-          Kerala 683561, India
-        </div>
-
-        <a
-          class="map-button"
-          href="https://maps.app.goo.gl/3jDQjPtPhLpJuaWC7"
-          target="_blank">
-          Google Maps
-        </a>
-
-      </div>
-
-
-      <!-- RECEPTION -->
-
-      <div class="event reveal">
-
-        <div class="event-icon">❀</div>
-
-        <h3>Reception</h3>
-
-        <div class="event-date">
-          Sunday, 13 June 2027
-        </div>
-
-        <div class="event-time">
-          06:00 PM
-        </div>
-
-        <div class="event-venue">
-          Majestic Ceremonials
-        </div>
-
-        <div class="event-address">
-          Talikulam, Thrissur<br>
-          Koprakalam Juma Masjid Road,<br>
-          Triprayar, Kerala 680566, India
-        </div>
-
-        <a
-          class="map-button"
-          href="https://maps.app.goo.gl/PEcVvMqr8K4uTsKs6"
-          target="_blank">
-          Google Maps
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FAMILY
-===================================================== -->
+========================================================= -->
 
 <section class="family">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="reveal">
+        <div class="reveal">
 
-      <div class="section-tag">
-        With The Love & Blessings Of
-      </div>
+            <div class="section-label">
+                With The Love & Blessings Of
+            </div>
 
-      <h2 class="section-title">
-        Our Families
-      </h2>
+            <div class="section-title">
+                Our Families
+            </div>
 
-      <div class="divider"></div>
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="family-grid">
+
+
+            <!-- GROOM FAMILY -->
+
+            <div class="reveal">
+
+                <div class="family-label">
+                    Groom's Family
+                </div>
+
+                <div class="family-parents">
+
+                    P.K Sirajudeen<br>
+                    &<br>
+                    Nasriya Sirajudeen
+
+                </div>
+
+                <div class="family-details">
+
+                    Grandson of
+
+                    <br><br>
+
+                    <strong>
+                        (Late) P.K Kader &
+                        (Late) Nafeesa Kader
+                    </strong>
+
+                    <br>
+
+                    Puthiyaveettil, Thalikulam
+
+                    <br><br>
+
+                    And
+
+                    <br><br>
+
+                    <strong>
+                        (Late) Mr. A. Adimakutty &
+                        Ramlath Adimakutty
+                    </strong>
+
+                    <br>
+
+                    Ambalath (H), Thalikulam
+
+                </div>
+
+            </div>
+
+
+            <!-- BRIDE FAMILY -->
+
+            <div class="reveal">
+
+                <div class="family-label">
+                    Bride's Family
+                </div>
+
+                <div class="family-parents">
+
+                    K.M Salim<br>
+                    &<br>
+                    Ayisha Beevi Salim
+
+                </div>
+
+                <div class="family-details">
+
+                    Granddaughter of
+
+                    <br><br>
+
+                    <strong>
+                        Late Maitheen K.M &
+                        Late Kochummani
+                    </strong>
+
+                    <br>
+
+                    Kottayil (H), Pengattussery
+
+                    <br><br>
+
+                    &
+
+                    <br><br>
+
+                    <strong>
+                        Late Aboobacker M.A &
+                        Late Khadeeja Aboobacker
+                    </strong>
+
+                    <br>
+
+                    Mucheth (H), Kapprasserry
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="family-grid">
-
-
-      <div class="reveal">
-
-        <div class="family-title">
-          Groom's Family
-        </div>
-
-        <div class="family-parents">
-          P.K Sirajudeen<br>
-          &<br>
-          Nasriya Sirajudeen
-        </div>
-
-        <div class="family-details">
-
-          Grandson of
-
-          <br><br>
-
-          <strong>
-            (Late) P.K Kader &
-            (Late) Nafeesa Kader
-          </strong>
-
-          <br>
-
-          Puthiyaveettil, Thalikulam
-
-          <br><br>
-
-          And
-
-          <br><br>
-
-          <strong>
-            (Late) Mr. A. Adimakutty &
-            Ramlath Adimakutty
-          </strong>
-
-          <br>
-
-          Ambalath (H), Thalikulam
-
-        </div>
-
-      </div>
-
-
-      <div class="reveal">
-
-        <div class="family-title">
-          Bride's Family
-        </div>
-
-        <div class="family-parents">
-          K.M Salim<br>
-          &<br>
-          Ayisha Beevi Salim
-        </div>
-
-        <div class="family-details">
-
-          Granddaughter of
-
-          <br><br>
-
-          <strong>
-            Late Maitheen K.M &
-            Late Kochummani
-          </strong>
-
-          <br>
-
-          Kottayil (H), Pengattussery
-
-          <br><br>
-
-          &
-
-          <br><br>
-
-          <strong>
-            Late Aboobacker M.A &
-            Late Khadeeja Aboobacker
-          </strong>
-
-          <br>
-
-          Mucheth (H), Kapprasserry
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      QURAN
-===================================================== -->
+========================================================= -->
 
 <section class="quote">
 
-  <div class="container reveal">
+    <div class="container reveal">
 
-    <div class="section-tag">
-      The Holy Quran
+        <div class="section-label">
+            The Holy Quran
+        </div>
+
+        <div class="quote-arabic">
+            وَخَلَقْنَاكُمْ أَزْوَاجًا
+        </div>
+
+        <div class="quote-english">
+            “And We created you in pairs.”
+        </div>
+
+        <div class="quote-source">
+            القرآن الكريم | Surah An-Naba 78:8
+        </div>
+
     </div>
-
-    <div class="quote-arabic">
-      وَخَلَقْنَاكُمْ أَزْوَاجًا
-    </div>
-
-    <div class="quote-text">
-      “And We created you in pairs.”
-    </div>
-
-    <div class="quote-source">
-      القرآن الكريم | Surah An-Naba 78:8
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      VENUES
-===================================================== -->
+========================================================= -->
 
 <section class="venue">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="reveal">
+        <div class="reveal">
 
-      <div class="section-tag">
-        Join Us
-      </div>
+            <div class="section-label">
+                Join Us
+            </div>
 
-      <h2 class="section-title">
-        Venue Details
-      </h2>
+            <div class="section-title">
+                Venue Details
+            </div>
 
-      <div class="divider"></div>
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="venue-card reveal">
+
+            <div class="section-label">
+                Nikah Ceremony
+            </div>
+
+            <h3>
+                Rajiv Gandhi Auditorium
+            </h3>
+
+            <div class="venue-address">
+
+                39FH+XJH, Edathala,<br>
+                Kerala 683561, India
+
+            </div>
+
+            <a
+                class="gold-button"
+                href="https://maps.app.goo.gl/3jDQjPtPhLpJuaWC7"
+                target="_blank">
+
+                Open Google Maps
+
+            </a>
+
+        </div>
+
+
+        <div class="venue-card reveal">
+
+            <div class="section-label">
+                Reception
+            </div>
+
+            <h3>
+                Majestic Ceremonials
+            </h3>
+
+            <div class="venue-address">
+
+                Talikulam, Thrissur<br>
+                Koprakalam Juma Masjid Road,<br>
+                Triprayar, Kerala 680566, India
+
+            </div>
+
+            <a
+                class="gold-button"
+                href="https://maps.app.goo.gl/PEcVvMqr8K4uTsKs6"
+                target="_blank">
+
+                Open Google Maps
+
+            </a>
+
+        </div>
 
     </div>
-
-
-    <div class="venue-card reveal">
-
-      <div class="section-tag">
-        Nikah Ceremony
-      </div>
-
-      <h3>
-        Rajiv Gandhi Auditorium
-      </h3>
-
-      <div class="venue-address">
-        39FH+XJH, Edathala,<br>
-        Kerala 683561, India
-      </div>
-
-      <a
-        class="gold-button"
-        href="https://maps.app.goo.gl/3jDQjPtPhLpJuaWC7"
-        target="_blank">
-        Open Google Maps
-      </a>
-
-    </div>
-
-
-    <div class="venue-card reveal">
-
-      <div class="section-tag">
-        Reception
-      </div>
-
-      <h3>
-        Majestic Ceremonials
-      </h3>
-
-      <div class="venue-address">
-        Talikulam, Thrissur<br>
-        Koprakalam Juma Masjid Road,<br>
-        Triprayar, Kerala 680566, India
-      </div>
-
-      <a
-        class="gold-button"
-        href="https://maps.app.goo.gl/PEcVvMqr8K4uTsKs6"
-        target="_blank">
-        Open Google Maps
-      </a>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      RSVP
-===================================================== -->
+========================================================= -->
 
 <section class="rsvp">
 
-  <div class="container reveal">
+    <div class="container reveal">
 
-    <div class="section-tag">
-      Kindly Confirm Your Presence
+        <div class="section-label">
+            Kindly Confirm Your Presence
+        </div>
+
+        <div class="section-title">
+            RSVP
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="rsvp-copy">
+
+            Your presence will make our special day
+            even more memorable. We would be delighted
+            to celebrate this beautiful occasion with you.
+
+        </div>
+
+        <div class="contact-name">
+            PK Nishab
+        </div>
+
+        <div class="contact-number">
+            +91 79024 40748
+        </div>
+
+        <a
+            class="whatsapp-button"
+            href="https://wa.me/917902440748?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20Wedding."
+            target="_blank">
+
+            RSVP on WhatsApp
+
+        </a>
+
     </div>
-
-    <h2 class="section-title">
-      RSVP
-    </h2>
-
-    <div class="divider"></div>
-
-    <div class="rsvp-text">
-
-      Your presence will make our special day even
-      more memorable. We would be delighted to
-      celebrate this beautiful occasion with you.
-
-    </div>
-
-    <div class="contact">
-      PK Nishab
-    </div>
-
-    <div class="phone">
-      +91 79024 40748
-    </div>
-
-    <a
-      class="whatsapp"
-      href="https://wa.me/917902440748?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20Wedding."
-      target="_blank">
-      RSVP on WhatsApp
-    </a>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      CALENDAR
-===================================================== -->
+========================================================= -->
 
 <section class="calendar">
 
-  <div class="container reveal">
+    <div class="container reveal">
 
-    <div class="section-tag">
-      Save The Date
+        <div class="section-label">
+            Save The Date
+        </div>
+
+        <div class="section-title">
+            13 June 2027
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="calendar-copy">
+
+            Add our Nikah to your calendar and
+            celebrate this beautiful day with us.
+
+        </div>
+
+        <button
+            class="calendar-button"
+            onclick="addCalendar()">
+
+            Add To Calendar
+
+        </button>
+
     </div>
-
-    <h2 class="section-title">
-      13 June 2027
-    </h2>
-
-    <div class="divider"></div>
-
-    <div class="calendar-text">
-      Add our Nikah to your calendar and
-      celebrate this beautiful day with us.
-    </div>
-
-    <button
-      class="calendar-button"
-      onclick="addCalendar()">
-      Add To Calendar
-    </button>
-
-  </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      CLOSING
-===================================================== -->
+========================================================= -->
 
 <section class="closing">
 
-  <div class="container reveal">
+    <div class="container reveal">
 
-    <div class="closing-text">
+        <div class="closing-copy">
 
-      We look forward to celebrating our special
-      day with you and beginning this beautiful
-      journey together.
+            We look forward to celebrating our
+            special day with you and beginning
+            this beautiful journey together.
+
+        </div>
+
+        <div class="closing-names">
+            Fayaz & Alfina
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-label">
+            13 June 2027
+        </div>
 
     </div>
-
-    <div class="closing-names">
-      Fayaz & Alfina
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="section-tag">
-      13 June 2027
-    </div>
-
-  </div>
 
 </section>
 
 
 <footer>
-  Fayaz & Alfina • Wedding Invitation • 13 June 2027
+
+    Fayaz & Alfina
+    •
+    Wedding Invitation
+    •
+    13 June 2027
+
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================================================
      MUSIC
-===================================================== -->
+========================================================= -->
 
 <button
-  id="musicButton"
-  class="music-button"
-  onclick="toggleMusic()">
-  ♪
+    id="musicButton"
+    class="music-button"
+    onclick="toggleMusic()">
+
+    ♪
+
 </button>
 
 <audio
-  id="weddingMusic"
-  src="./wedding-music.mp3"
-  preload="auto">
+    id="weddingMusic"
+    src="./wedding-music.mp3"
+    preload="auto">
 </audio>
 
 
 <script>
 
-/* =====================================================
+/* =========================================================
    OPEN INVITATION
-===================================================== */
+========================================================= */
 
 function openInvitation() {
 
-  document
-    .getElementById("opening")
-    .classList.add("hide");
+    document
+        .getElementById("opening")
+        .classList.add("hide");
 
-  startWeddingMusic();
+    startMusic();
 
 }
 
 
-/* =====================================================
+/* =========================================================
    COUNTDOWN
-===================================================== */
+========================================================= */
 
 const weddingDate =
-  new Date(
-    "2027-06-13T11:30:00+05:30"
-  ).getTime();
+    new Date(
+        "2027-06-13T11:30:00+05:30"
+    ).getTime();
 
 
-function countdown() {
+function updateCountdown() {
 
-  const now =
-    new Date().getTime();
+    const now =
+        new Date().getTime();
 
-  const difference =
-    weddingDate - now;
+    const difference =
+        weddingDate - now;
 
+    if (difference <= 0) {
 
-  if (difference <= 0) {
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
 
-    document.getElementById("days").innerText = "00";
-    document.getElementById("hours").innerText = "00";
-    document.getElementById("minutes").innerText = "00";
-    document.getElementById("seconds").innerText = "00";
+        return;
+    }
 
-    return;
-  }
+    const days =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
 
+    const hours =
+        Math.floor(
+            (difference %
+            (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
 
-  const days =
-    Math.floor(
-      difference /
-      (1000 * 60 * 60 * 24)
-    );
+    const minutes =
+        Math.floor(
+            (difference %
+            (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
 
+    const seconds =
+        Math.floor(
+            (difference %
+            (1000 * 60)) /
+            1000
+        );
 
-  const hours =
-    Math.floor(
-      (difference %
-      (1000 * 60 * 60 * 24)) /
-      (1000 * 60 * 60)
-    );
+    document.getElementById("days").textContent =
+        String(days).padStart(2,"0");
 
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2,"0");
 
-  const minutes =
-    Math.floor(
-      (difference %
-      (1000 * 60 * 60)) /
-      (1000 * 60)
-    );
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2,"0");
 
-
-  const seconds =
-    Math.floor(
-      (difference %
-      (1000 * 60)) /
-      1000
-    );
-
-
-  document.getElementById("days").innerText =
-    String(days).padStart(2,"0");
-
-  document.getElementById("hours").innerText =
-    String(hours).padStart(2,"0");
-
-  document.getElementById("minutes").innerText =
-    String(minutes).padStart(2,"0");
-
-  document.getElementById("seconds").innerText =
-    String(seconds).padStart(2,"0");
-
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2,"0");
 }
 
+updateCountdown();
 
-countdown();
-
-setInterval(countdown,1000);
+setInterval(updateCountdown,1000);
 
 
-/* =====================================================
-   SCROLL ANIMATION
-===================================================== */
+/* =========================================================
+   SCROLL ANIMATIONS
+========================================================= */
 
-const revealItems =
-  document.querySelectorAll(".reveal");
-
+const revealElements =
+    document.querySelectorAll(".reveal");
 
 const observer =
-  new IntersectionObserver(
-    function(entries) {
+    new IntersectionObserver(
+        function(entries) {
 
-      entries.forEach(
-        function(entry) {
+            entries.forEach(function(entry) {
 
-          if (entry.isIntersecting) {
+                if (entry.isIntersecting) {
 
-            entry.target
-              .classList
-              .add("show");
+                    entry.target.classList.add("show");
 
-          }
+                }
 
+            });
+
+        },
+        {
+            threshold: 0.10
         }
-      );
+    );
 
-    },
-    {
-      threshold:.10
-    }
-  );
+revealElements.forEach(function(element) {
 
+    observer.observe(element);
 
-revealItems.forEach(
-  function(item) {
-    observer.observe(item);
-  }
-);
+});
 
 
-/* =====================================================
+/* =========================================================
    MUSIC
-   START = 00:00
-   END = 00:36
-===================================================== */
+   0:00 TO 0:36
+========================================================= */
 
 const music =
-  document.getElementById(
-    "weddingMusic"
-  );
+    document.getElementById("weddingMusic");
 
 const musicButton =
-  document.getElementById(
-    "musicButton"
-  );
+    document.getElementById("musicButton");
 
-let playing = false;
+let musicPlaying = false;
 
 const musicStart = 0;
 
 const musicEnd = 36;
 
 
-/* =====================================================
-   START MUSIC
-===================================================== */
+function startMusic() {
 
-function startWeddingMusic() {
+    music.currentTime = musicStart;
 
-  music.currentTime = musicStart;
+    music.play()
+        .then(function() {
 
-  music.play()
-    .then(function() {
+            musicPlaying = true;
 
-      playing = true;
+            musicButton.textContent = "♫";
 
-      musicButton.innerHTML = "♫";
+            musicButton.classList.add("playing");
 
-      musicButton
-        .classList
-        .add("playing");
+        })
+        .catch(function(error) {
 
-    })
-    .catch(function(error) {
+            console.log(
+                "Music autoplay blocked by browser:",
+                error
+            );
 
-      /*
-        Some browsers block autoplay.
-        The Open Invitation button will still
-        start the music after user interaction.
-      */
-
-      console.log(
-        "Autoplay blocked:",
-        error
-      );
-
-    });
+        });
 
 }
 
-
-/* =====================================================
-   MUSIC BUTTON
-===================================================== */
 
 function toggleMusic() {
 
-  if (!playing) {
+    if (musicPlaying) {
 
-    startWeddingMusic();
+        music.pause();
 
-  } else {
+        musicPlaying = false;
 
-    music.pause();
+        musicButton.textContent = "♪";
 
-    playing = false;
+        musicButton.classList.remove("playing");
 
-    musicButton.innerHTML = "♪";
+    } else {
 
-    musicButton
-      .classList
-      .remove("playing");
+        startMusic();
 
-  }
+    }
 
 }
 
 
-/* =====================================================
-   STOP MUSIC AT 36 SECONDS
-===================================================== */
+/* STOP AT 36 SECONDS */
 
 music.addEventListener(
-  "timeupdate",
-  function() {
+    "timeupdate",
+    function() {
 
-    if (
-      music.currentTime >= musicEnd
-    ) {
+        if (music.currentTime >= musicEnd) {
 
-      music.pause();
+            music.pause();
 
-      music.currentTime = 0;
+            music.currentTime = musicStart;
 
-      playing = false;
+            musicPlaying = false;
 
-      musicButton.innerHTML = "♪";
+            musicButton.textContent = "♪";
 
-      musicButton
-        .classList
-        .remove("playing");
+            musicButton.classList.remove("playing");
+
+        }
 
     }
-
-  }
 );
 
 
-/* =====================================================
-   AUTOPLAY ATTEMPT
-===================================================== */
+/* =========================================================
+   AUTOPLAY
+========================================================= */
 
 window.addEventListener(
-  "load",
-  function() {
+    "load",
+    function() {
 
-    setTimeout(
-      function() {
+        setTimeout(function() {
 
-        startWeddingMusic();
+            startMusic();
 
-      },
-      800
-    );
+        },800);
 
-  }
+    }
 );
 
 
-/* =====================================================
+/* =========================================================
    ADD TO CALENDAR
-===================================================== */
+========================================================= */
 
 function addCalendar() {
 
-  const event =
+    const event =
 `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Fayaz & Alfina//Wedding//EN
@@ -2093,37 +2050,33 @@ DESCRIPTION:Nikah of Fayaz & Alfina
 END:VEVENT
 END:VCALENDAR`;
 
+    const blob =
+        new Blob(
+            [event],
+            {
+                type:
+                "text/calendar;charset=utf-8"
+            }
+        );
 
-  const blob =
-    new Blob(
-      [event],
-      {
-        type:"text/calendar;charset=utf-8"
-      }
-    );
+    const url =
+        URL.createObjectURL(blob);
 
+    const link =
+        document.createElement("a");
 
-  const url =
-    URL.createObjectURL(blob);
+    link.href = url;
 
+    link.download =
+        "Fayaz-Alfina-Wedding.ics";
 
-  const link =
-    document.createElement("a");
+    document.body.appendChild(link);
 
+    link.click();
 
-  link.href = url;
+    document.body.removeChild(link);
 
-  link.download =
-    "Fayaz-Alfina-Wedding.ics";
-
-
-  document.body.appendChild(link);
-
-  link.click();
-
-  document.body.removeChild(link);
-
-  URL.revokeObjectURL(url);
+    URL.revokeObjectURL(url);
 
 }
 
