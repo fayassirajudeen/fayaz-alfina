@@ -13,12 +13,12 @@ content="Fayaz & Alfina Wedding Invitation - 13 June 2027">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 /* =====================================================
-   ORIGINAL LUXURY COLOUR PALETTE
+   LUXURY COLOUR PALETTE
 ===================================================== */
 
 :root {
@@ -60,13 +60,10 @@ body {
 ===================================================== */
 
 #opening-screen {
-
   position:fixed;
   inset:0;
-
   width:100%;
   height:100vh;
-
   z-index:9999;
 
   background:
@@ -90,7 +87,6 @@ body {
   display:flex;
   justify-content:center;
   align-items:center;
-
   text-align:center;
 
   transition:
@@ -103,131 +99,81 @@ body {
   visibility:hidden;
 }
 
-
 .opening-content {
-
   padding:30px;
-
   max-width:700px;
-
   position:relative;
-
   z-index:2;
 }
 
-
 .opening-arabic {
-  font-family:"Aref Ruqaa Ink", serif;
+  font-family:"Amiri",serif;
   font-size:clamp(2rem,7vw,4rem);
+  font-weight:700;
   color:var(--gold-light);
   margin-bottom:20px;
   direction:rtl;
+  line-height:1.5;
 }
 
-
 .opening-small {
-
   color:rgba(255,255,255,.70);
-
   text-transform:uppercase;
-
   letter-spacing:4px;
-
   font-size:11px;
-
   margin-bottom:20px;
 }
 
-
 .opening-logo {
-
   width:95px;
-
   height:95px;
-
   object-fit:contain;
-
   margin:0 auto 18px;
-
   display:block;
-
   filter:brightness(1.05);
 }
 
-
 .opening-names {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:clamp(3.5rem,10vw,7rem);
-
   line-height:.9;
-
   color:white;
-
   font-weight:500;
-
   margin-bottom:10px;
 }
 
-
 .opening-amp {
-
   font-family:"Great Vibes",cursive;
-
   color:var(--gold-light);
-
   display:block;
-
   font-size:.6em;
-
   margin:5px 0;
 }
 
-
 .opening-date {
-
   color:var(--gold-light);
-
   font-size:13px;
-
   letter-spacing:3px;
-
   margin:30px 0;
-
   text-transform:uppercase;
 }
 
-
 .open-btn {
-
   border:1px solid var(--gold-light);
-
   background:transparent;
-
   color:white;
-
   padding:15px 35px;
-
   cursor:pointer;
-
   letter-spacing:2px;
-
   font-family:"Montserrat",sans-serif;
-
   text-transform:uppercase;
-
   font-size:11px;
-
   transition:.4s;
 }
 
 .open-btn:hover {
-
   background:var(--gold-light);
-
   color:var(--dark);
-
   transform:translateY(-3px);
 }
 
@@ -237,22 +183,16 @@ body {
 ===================================================== */
 
 .opening-flower {
-
   position:absolute;
-
   font-size:120px;
-
   opacity:.12;
-
   pointer-events:none;
 }
-
 
 .flower-one {
   top:5%;
   left:4%;
 }
-
 
 .flower-two {
   bottom:5%;
@@ -265,31 +205,21 @@ body {
 ===================================================== */
 
 .floating {
-
   position:fixed;
-
   pointer-events:none;
-
   z-index:1;
-
   opacity:.15;
 }
 
-
 .floating.one {
-
   top:20%;
   left:-30px;
-
   font-size:90px;
 }
 
-
 .floating.two {
-
   top:65%;
   right:-25px;
-
   font-size:100px;
 }
 
@@ -299,61 +229,37 @@ body {
 ===================================================== */
 
 section {
-
   position:relative;
-
   z-index:2;
-
   padding:100px 20px;
 }
 
-
 .container {
-
   width:min(1100px,100%);
-
   margin:auto;
-
   text-align:center;
 }
 
-
 .section-tag {
-
   text-transform:uppercase;
-
   color:var(--gold);
-
   letter-spacing:4px;
-
   font-size:10px;
-
   margin-bottom:15px;
 }
 
-
 .section-title {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:clamp(3rem,6vw,5rem);
-
   font-weight:500;
-
   line-height:1;
-
   margin-bottom:25px;
 }
 
-
 .divider {
-
   width:80px;
-
   height:1px;
-
   background:var(--gold);
-
   margin:25px auto;
 }
 
@@ -363,21 +269,16 @@ section {
 ===================================================== */
 
 .hero {
-
   min-height:100vh;
-
   display:flex;
-
   align-items:center;
 
   background:
-
     radial-gradient(
       circle at top,
       rgba(255,255,255,.8),
       transparent 45%
     ),
-
     linear-gradient(
       180deg,
       #f8f3ea,
@@ -385,104 +286,67 @@ section {
     );
 }
 
-
 .hero-content {
-
   max-width:900px;
-
   margin:auto;
-
   text-align:center;
-
   padding:100px 20px 60px;
 }
 
-
 .arabic-main {
-  font-family:"Aref Ruqaa Ink", serif;
+  font-family:"Amiri",serif;
   font-size:clamp(2rem,5vw,3.4rem);
+  font-weight:700;
   direction:rtl;
   color:var(--gold);
   margin-bottom:30px;
+  line-height:1.5;
 }
 
-
 .hero-small {
-
   text-transform:uppercase;
-
   letter-spacing:4px;
-
   font-size:11px;
-
   color:var(--gold);
-
   margin-bottom:25px;
 }
 
-
 .couple-logo {
-
   width:90px;
-
   height:90px;
-
   object-fit:contain;
-
   margin:0 auto 25px;
-
   display:block;
 }
 
-
 .couple-names {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:clamp(4rem,12vw,8rem);
-
   font-weight:500;
-
   line-height:.8;
 }
 
-
 .couple-names span {
-
   display:block;
 }
 
-
 .couple-names .and {
-
   font-family:"Great Vibes",cursive;
-
   color:var(--gold);
-
   font-size:.6em;
-
   margin:12px 0;
 }
 
-
 .hero-date {
-
   margin-top:45px;
-
   font-size:14px;
-
   letter-spacing:3px;
-
   text-transform:uppercase;
 }
 
-
 .scroll-indicator {
-
   margin-top:70px;
-
   color:var(--gold);
-
   font-size:25px;
 }
 
@@ -492,36 +356,23 @@ section {
 ===================================================== */
 
 .couple-photo-section {
-
   background:white;
 }
 
-
 .couple-photo-frame {
-
   width:min(430px,90vw);
-
   margin:40px auto 0;
-
   padding:10px;
-
   border:1px solid rgba(182,138,69,.55);
-
   background:#fff;
-
   box-shadow:
     0 20px 60px rgba(61,43,32,.12);
 }
 
-
 .couple-photo {
-
   width:100%;
-
   display:block;
-
   height:auto;
-
   object-fit:cover;
 }
 
@@ -531,35 +382,22 @@ section {
 ===================================================== */
 
 .invitation-message {
-
   background:var(--white);
 }
 
-
 .message-box {
-
   max-width:750px;
-
   margin:auto;
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:clamp(1.5rem,3vw,2rem);
-
   line-height:1.6;
-
   font-style:italic;
 }
 
-
 .message-signature {
-
   margin-top:35px;
-
   font-family:"Great Vibes",cursive;
-
   color:var(--gold);
-
   font-size:2.8rem;
 }
 
@@ -569,14 +407,11 @@ section {
 ===================================================== */
 
 .countdown-section {
-
   background:
-
     linear-gradient(
       rgba(31,26,21,.85),
       rgba(31,26,21,.90)
     ),
-
     linear-gradient(
       135deg,
       #4c3929,
@@ -586,65 +421,39 @@ section {
   color:white;
 }
 
-
 .countdown-section .section-title {
-
   color:var(--gold-light);
 }
 
-
 .countdown-grid {
-
   display:grid;
-
   grid-template-columns:repeat(4,1fr);
-
   gap:20px;
-
   margin-top:45px;
-
   max-width:800px;
-
   margin-left:auto;
-
   margin-right:auto;
 }
 
-
 .countdown-item {
-
   border:1px solid rgba(214,184,119,.5);
-
   padding:30px 10px;
-
   background:rgba(255,255,255,.03);
 }
 
-
 .countdown-number {
-
   display:block;
-
   font-family:"Cormorant Garamond",serif;
-
   color:var(--gold-light);
-
   font-size:clamp(2.7rem,6vw,4rem);
-
   line-height:1;
 }
 
-
 .countdown-label {
-
   margin-top:10px;
-
   text-transform:uppercase;
-
   letter-spacing:2px;
-
   font-size:9px;
-
   color:rgba(255,255,255,.7);
 }
 
@@ -654,104 +463,64 @@ section {
 ===================================================== */
 
 .events-section {
-
   background:#f5efe5;
 }
 
-
 .event-grid {
-
   display:grid;
-
   grid-template-columns:repeat(2,1fr);
-
   gap:35px;
-
   margin-top:55px;
 }
 
-
 .event-card {
-
   background:white;
-
   padding:35px;
-
   box-shadow:
     0 15px 50px rgba(61,43,32,.08);
-
   border-top:2px solid var(--gold);
-
   transition:.4s;
 }
 
-
 .event-card:hover {
-
   transform:translateY(-5px);
 }
 
-
 .event-icon {
-
   font-size:38px;
-
   color:var(--gold);
-
   margin-bottom:20px;
 }
 
-
 .event-name {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:3rem;
-
   margin-bottom:25px;
 }
 
-
 .event-date {
-
   color:var(--gold);
-
   text-transform:uppercase;
-
   letter-spacing:2px;
-
   font-size:12px;
-
   margin-bottom:10px;
 }
 
-
 .event-time {
-
   font-size:1rem;
-
   margin-bottom:25px;
 }
 
-
 .event-venue {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:1.6rem;
-
   line-height:1.2;
 }
 
-
 .event-address {
-
   margin-top:15px;
-
   font-size:12px;
-
   line-height:1.8;
-
   color:#756c62;
 }
 
@@ -761,23 +530,14 @@ section {
 ===================================================== */
 
 .venue-image {
-
   width:100%;
-
   max-width:360px;
-
   height:190px;
-
   object-fit:cover;
-
   display:block;
-
   margin:0 auto 28px;
-
   border:1px solid var(--cream-dark);
-
   padding:5px;
-
   background:white;
 }
 
@@ -787,77 +547,47 @@ section {
 ===================================================== */
 
 .family-section {
-
   background:white;
 }
 
-
 .family-intro {
-
   max-width:700px;
-
   margin:0 auto 50px;
-
   line-height:1.8;
-
   font-size:14px;
-
   color:#71675d;
 }
 
-
 .family-grid {
-
   display:grid;
-
   grid-template-columns:repeat(2,1fr);
-
   gap:50px;
 }
 
-
 .family-box {
-
   padding:20px;
 }
 
-
 .family-side {
-
   text-transform:uppercase;
-
   color:var(--gold);
-
   letter-spacing:3px;
-
   font-size:10px;
-
   margin-bottom:20px;
 }
 
-
 .family-names {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:2rem;
-
   line-height:1.4;
-
   margin-bottom:25px;
 }
 
-
 .grandparents {
-
   font-size:12px;
-
   line-height:1.9;
-
   color:#6d6257;
-
   max-width:400px;
-
   margin:auto;
 }
 
@@ -867,7 +597,6 @@ section {
 ===================================================== */
 
 .quote-section {
-
   background:
     linear-gradient(
       135deg,
@@ -876,38 +605,28 @@ section {
     );
 }
 
-
 .quote-arabic {
-  font-family:"Aref Ruqaa Ink",serif;
+  font-family:"Amiri",serif;
   font-size:clamp(2.5rem,6vw,5rem);
+  font-weight:700;
   direction:rtl;
   color:var(--gold);
   margin-bottom:30px;
+  line-height:1.5;
 }
 
-
 .quote-text {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:clamp(1.6rem,3vw,2.3rem);
-
   font-style:italic;
-
   max-width:700px;
-
   margin:auto;
 }
 
-
 .quote-source {
-
   margin-top:20px;
-
   color:var(--gold);
-
   font-size:12px;
-
   letter-spacing:1px;
 }
 
@@ -917,129 +636,82 @@ section {
 ===================================================== */
 
 .venue-section {
-
   background:white;
 }
 
-
 .venue-card {
-
   max-width:800px;
-
   margin:45px auto 0;
-
   padding:45px 25px;
-
   border:1px solid var(--cream-dark);
 }
 
-
 .venue-title {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:2.7rem;
-
   margin-bottom:10px;
 }
 
-
 .venue-address {
-
   font-size:13px;
-
   line-height:1.8;
-
   color:#6e6459;
-
   max-width:600px;
-
   margin:15px auto 30px;
 }
 
-
 .button-row {
-
   display:flex;
-
   justify-content:center;
-
   gap:15px;
-
   flex-wrap:wrap;
 }
 
-
 .btn {
-
   display:inline-block;
-
   text-decoration:none;
-
   padding:15px 25px;
-
   text-transform:uppercase;
-
   font-size:10px;
-
   letter-spacing:2px;
-
   transition:.3s;
-
   cursor:pointer;
 }
 
-
 .btn-primary {
-
   background:var(--gold);
-
   color:white;
-
   border:1px solid var(--gold);
 }
-
 
 .btn-primary:hover {
-
   background:transparent;
-
   color:var(--gold);
 }
-
 
 .btn-outline {
-
   border:1px solid var(--gold);
-
   color:var(--gold);
-
   background:transparent;
 }
 
-
 .btn-outline:hover {
-
   background:var(--gold);
-
   color:white;
 }
 
 
 /* =====================================================
-   We Await Your Presence
+   RSVP
 ===================================================== */
 
 .rsvp-section {
-
   background:
-
     radial-gradient(
       circle at center,
       rgba(182,138,69,.25),
       transparent 30%
     ),
-
     linear-gradient(
       135deg,
       #211a15,
@@ -1049,45 +721,28 @@ section {
   color:white;
 }
 
-
 .rsvp-section .section-title {
-
   color:var(--gold-light);
 }
 
-
 .rsvp-text {
-
   max-width:600px;
-
   margin:auto;
-
   color:rgba(255,255,255,.75);
-
   line-height:1.8;
-
   font-size:14px;
 }
 
-
 .contact-name {
-
   margin-top:35px;
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:2.2rem;
 }
 
-
 .contact-phone {
-
   color:var(--gold-light);
-
   margin:10px 0 30px;
-
   font-size:14px;
-
   letter-spacing:1px;
 }
 
@@ -1097,20 +752,15 @@ section {
 ===================================================== */
 
 .closing-section {
-
   min-height:70vh;
-
   display:flex;
-
   align-items:center;
 
   background:
-
     linear-gradient(
       rgba(248,243,234,.85),
       rgba(248,243,234,.95)
     ),
-
     linear-gradient(
       135deg,
       #e7d8c1,
@@ -1118,31 +768,19 @@ section {
     );
 }
 
-
 .closing-text {
-
   font-family:"Cormorant Garamond",serif;
-
   font-size:clamp(1.8rem,4vw,3rem);
-
   line-height:1.5;
-
   max-width:700px;
-
   margin:auto;
-
   font-style:italic;
 }
 
-
 .closing-names {
-
   margin-top:40px;
-
   font-family:"Great Vibes",cursive;
-
   font-size:clamp(3.5rem,7vw,5rem);
-
   color:var(--gold);
 }
 
@@ -1152,41 +790,30 @@ section {
 ===================================================== */
 
 .music-button {
-
   position:fixed;
-
   right:20px;
-
   bottom:20px;
-
   z-index:100;
 
   width:52px;
-
   height:52px;
 
   border-radius:50%;
-
   border:none;
 
   background:var(--gold);
-
   color:white;
 
   cursor:pointer;
-
   font-size:20px;
 
   box-shadow:
     0 5px 20px rgba(0,0,0,.2);
 }
 
-
 .music-button.playing {
-
   animation:pulseMusic 1.5s infinite;
 }
-
 
 @keyframes pulseMusic {
 
@@ -1206,41 +833,29 @@ section {
 ===================================================== */
 
 footer {
-
   background:#1d1713;
-
   color:rgba(255,255,255,.5);
-
   text-align:center;
-
   padding:30px 20px;
-
   font-size:10px;
-
   letter-spacing:1px;
 }
 
 
 /* =====================================================
-   SIMPLE ORIGINAL REVEAL
+   REVEAL
 ===================================================== */
 
 .reveal {
-
   opacity:0;
-
   transform:translateY(25px);
-
   transition:
     opacity .8s ease,
     transform .8s ease;
 }
 
-
 .reveal.active {
-
   opacity:1;
-
   transform:translateY(0);
 }
 
@@ -1303,24 +918,15 @@ footer {
 
 </head>
 
-
 <body>
 
 
-<!-- =====================================================
-     OPENING
-===================================================== -->
+<!-- OPENING -->
 
 <div id="opening-screen">
 
-  <div class="opening-flower flower-one">
-    ✦
-  </div>
-
-  <div class="opening-flower flower-two">
-    ❀
-  </div>
-
+  <div class="opening-flower flower-one">✦</div>
+  <div class="opening-flower flower-two">❀</div>
 
   <div class="opening-content">
 
@@ -1328,13 +934,9 @@ footer {
       بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
     </div>
 
-
     <p class="opening-small">
       Wedding Invitation
     </p>
-
-
-    <!-- SVG LOGO -->
 
     <img
       src="logo.svg"
@@ -1343,24 +945,19 @@ footer {
       onerror="this.style.display='none';"
     >
 
-
     <div class="opening-names">
 
       Fayaz
 
-      <span class="opening-amp">
-        &
-      </span>
+      <span class="opening-amp">&</span>
 
       Alfina
 
     </div>
 
-
     <div class="opening-date">
       13 June 2027
     </div>
-
 
     <button
       class="open-btn"
@@ -1376,18 +973,11 @@ footer {
 
 <!-- FLOATING DECOR -->
 
-<div class="floating one">
-  ❀
-</div>
-
-<div class="floating two">
-  ✦
-</div>
+<div class="floating one">❀</div>
+<div class="floating two">✦</div>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1397,13 +987,9 @@ footer {
       بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
     </div>
 
-
     <p class="hero-small">
       The Wedding Celebration Of
     </p>
-
-
-    <!-- LOGO -->
 
     <img
       src="logo.svg"
@@ -1412,44 +998,30 @@ footer {
       onerror="this.style.display='none';"
     >
 
-
     <h1 class="couple-names">
 
-      <span>
-        Fayaz
-      </span>
+      <span>Fayaz</span>
 
-      <span class="and">
-        &
-      </span>
+      <span class="and">&</span>
 
-      <span>
-        Alfina
-      </span>
+      <span>Alfina</span>
 
     </h1>
 
-
     <div class="divider"></div>
-
 
     <p class="hero-date">
       Sunday • 13 June 2027
     </p>
 
-
-    <div class="scroll-indicator">
-      ↓
-    </div>
+    <div class="scroll-indicator">↓</div>
 
   </div>
 
 </section>
 
 
-<!-- =====================================================
-     COUPLE PHOTO
-===================================================== -->
+<!-- COUPLE PHOTO -->
 
 <section class="couple-photo-section">
 
@@ -1459,13 +1031,9 @@ footer {
       Our Beautiful Beginning
     </p>
 
-
     <h2 class="section-title">
       Fayaz & Alfina
     </h2>
-
-
-    <!-- COUPLE IMAGE -->
 
     <div class="couple-photo-frame">
 
@@ -1483,9 +1051,7 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     MESSAGE
-===================================================== -->
+<!-- MESSAGE -->
 
 <section class="invitation-message">
 
@@ -1495,14 +1061,11 @@ footer {
       With The Blessings Of Allah
     </p>
 
-
     <h2 class="section-title">
       Our Special Day
     </h2>
 
-
     <div class="divider"></div>
-
 
     <div class="message-box">
 
@@ -1512,7 +1075,6 @@ footer {
         to join us as we celebrate the beginning of our
         beautiful journey together.
       </p>
-
 
       <div class="message-signature">
         Fayaz & Alfina
@@ -1525,9 +1087,7 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     COUNTDOWN
-===================================================== -->
+<!-- COUNTDOWN -->
 
 <section class="countdown-section">
 
@@ -1537,78 +1097,32 @@ footer {
       Counting The Moments
     </p>
 
-
     <h2 class="section-title">
       Until Our Nikah
     </h2>
 
-
     <div class="divider"></div>
-
 
     <div class="countdown-grid">
 
       <div class="countdown-item">
-
-        <span
-          class="countdown-number"
-          id="days"
-        >
-          0
-        </span>
-
-        <span class="countdown-label">
-          Days
-        </span>
-
+        <span class="countdown-number" id="days">0</span>
+        <span class="countdown-label">Days</span>
       </div>
 
-
       <div class="countdown-item">
-
-        <span
-          class="countdown-number"
-          id="hours"
-        >
-          0
-        </span>
-
-        <span class="countdown-label">
-          Hours
-        </span>
-
+        <span class="countdown-number" id="hours">0</span>
+        <span class="countdown-label">Hours</span>
       </div>
 
-
       <div class="countdown-item">
-
-        <span
-          class="countdown-number"
-          id="minutes"
-        >
-          0
-        </span>
-
-        <span class="countdown-label">
-          Minutes
-        </span>
-
+        <span class="countdown-number" id="minutes">0</span>
+        <span class="countdown-label">Minutes</span>
       </div>
 
-
       <div class="countdown-item">
-
-        <span
-          class="countdown-number"
-          id="seconds"
-        >
-          0
-        </span>
-
-        <span class="countdown-label">
-          Seconds
-        </span>
-
+        <span class="countdown-number" id="seconds">0</span>
+        <span class="countdown-label">Seconds</span>
       </div>
 
     </div>
@@ -1618,9 +1132,7 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     EVENTS
-===================================================== -->
+<!-- EVENTS -->
 
 <section class="events-section">
 
@@ -1632,16 +1144,13 @@ footer {
         Celebrate With Us
       </p>
 
-
       <h2 class="section-title">
         Wedding Events
       </h2>
 
-
       <div class="divider"></div>
 
     </div>
-
 
     <div class="event-grid">
 
@@ -1650,39 +1159,30 @@ footer {
 
       <div class="event-card reveal">
 
-        <div class="event-icon">
-          ✦
-        </div>
-
+        <div class="event-icon">✦</div>
 
         <h3 class="event-name">
           Nikah
         </h3>
 
-
         <p class="event-date">
           Sunday, 13 June 2027
         </p>
-
 
         <p class="event-time">
           11:30 AM
         </p>
 
-
         <h4 class="event-venue">
           Rajiv Gandhi Auditorium
         </h4>
-
 
         <p class="event-address">
           39FH+XJH, Edathala,<br>
           Kerala 683561, India
         </p>
 
-
         <br>
-
 
         <a
           href="https://maps.app.goo.gl/3jDQjPtPhLpJuaWC7"
@@ -1699,30 +1199,23 @@ footer {
 
       <div class="event-card reveal">
 
-        <div class="event-icon">
-          ❀
-        </div>
-
+        <div class="event-icon">❀</div>
 
         <h3 class="event-name">
           Reception
         </h3>
 
-
         <p class="event-date">
           Sunday, 13 June 2027
         </p>
-
 
         <p class="event-time">
           06:00 PM
         </p>
 
-
         <h4 class="event-venue">
           Majestic Ceremonials
         </h4>
-
 
         <p class="event-address">
           Talikulam, Thrissur<br>
@@ -1730,9 +1223,7 @@ footer {
           Triprayar, Kerala 680566, India
         </p>
 
-
         <br>
-
 
         <a
           href="https://maps.app.goo.gl/PEcVvMqr8K4uTsKs6"
@@ -1751,9 +1242,7 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     FAMILY
-===================================================== -->
+<!-- FAMILY -->
 
 <section class="family-section">
 
@@ -1765,21 +1254,16 @@ footer {
         With The Love & Blessings Of
       </p>
 
-
       <h2 class="section-title">
         Our Families
       </h2>
 
-
       <div class="divider"></div>
 
-
       <p class="family-intro">
-
         We are grateful to our families for their love,
         prayers and blessings as we begin this beautiful
         journey together.
-
       </p>
 
     </div>
@@ -1796,7 +1280,6 @@ footer {
           Groom's Family
         </p>
 
-
         <div class="family-names">
 
           P.K Sirajudeen
@@ -1810,7 +1293,6 @@ footer {
           Nasriya Sirajudeen
 
         </div>
-
 
         <div class="grandparents">
 
@@ -1855,7 +1337,6 @@ footer {
           Bride's Family
         </p>
 
-
         <div class="family-names">
 
           K.M Salim
@@ -1869,7 +1350,6 @@ footer {
           Ayisha Beevi Salim
 
         </div>
-
 
         <div class="grandparents">
 
@@ -1912,9 +1392,7 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     QURAN
-===================================================== -->
+<!-- QURAN -->
 
 <section class="quote-section">
 
@@ -1924,16 +1402,13 @@ footer {
       The Holy Quran
     </p>
 
-
     <div class="quote-arabic">
       وَخَلَقْنَاكُمْ أَزْوَاجًا
     </div>
 
-
     <p class="quote-text">
       “And We created you in pairs.”
     </p>
-
 
     <p class="quote-source">
       القرآن الكريم | Surah An-Naba 78:8
@@ -1944,14 +1419,11 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     VENUE DETAILS
-===================================================== -->
+<!-- VENUE DETAILS -->
 
 <section class="venue-section">
 
   <div class="container">
-
 
     <div class="reveal">
 
@@ -1959,11 +1431,9 @@ footer {
         Join Us
       </p>
 
-
       <h2 class="section-title">
         Venue Details
       </h2>
-
 
       <div class="divider"></div>
 
@@ -1974,9 +1444,6 @@ footer {
 
     <div class="venue-card reveal">
 
-
-      <!-- NIKAH IMAGE -->
-
       <img
         src="nikah.jpg"
         class="venue-image"
@@ -1984,24 +1451,18 @@ footer {
         onerror="this.style.display='none';"
       >
 
-
       <p class="section-tag">
         Nikah Ceremony
       </p>
-
 
       <h3 class="venue-title">
         Rajiv Gandhi Auditorium
       </h3>
 
-
       <p class="venue-address">
-
         39FH+XJH, Edathala,<br>
         Kerala 683561, India
-
       </p>
-
 
       <div class="button-row">
 
@@ -2012,7 +1473,6 @@ footer {
         >
           Open Google Maps
         </a>
-
 
         <a
           href="#rsvp"
@@ -2030,9 +1490,6 @@ footer {
 
     <div class="venue-card reveal">
 
-
-      <!-- RECEPTION IMAGE -->
-
       <img
         src="reception.jpg"
         class="venue-image"
@@ -2040,25 +1497,19 @@ footer {
         onerror="this.style.display='none';"
       >
 
-
       <p class="section-tag">
         Reception
       </p>
-
 
       <h3 class="venue-title">
         Majestic Ceremonials
       </h3>
 
-
       <p class="venue-address">
-
         Talikulam, Thrissur<br>
         Koprakalam Juma Masjid Road,<br>
         Triprayar, Kerala 680566, India
-
       </p>
-
 
       <div class="button-row">
 
@@ -2079,52 +1530,38 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     RSVP
-===================================================== -->
+<!-- RSVP -->
 
-<section
-  class="rsvp-section"
-  id="rsvp"
->
+<section class="rsvp-section" id="rsvp">
 
   <div class="container reveal">
-
 
     <p class="section-tag">
       Share In Our Happiness
     </p>
 
-
     <h2 class="section-title">
       We Await Your Presence
     </h2>
 
-
     <div class="divider"></div>
 
-
-    <p class="We Await Your Presence-text">
-
+    <p class="rsvp-text">
       Your presence will make our special day even more memorable.
       We would be delighted to celebrate this beautiful occasion
       with you.
-
     </p>
-
 
     <div class="contact-name">
       Contact
     </div>
 
-
     <div class="contact-phone">
       +91 79024 40748
     </div>
 
-
     <a
-      href="https://wa.me/917902440748?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina's%20Wedding."
+      href="https://wa.me/917902440748?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20Wedding."
       target="_blank"
       class="btn btn-primary"
     >
@@ -2136,35 +1573,26 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     CALENDAR
-===================================================== -->
+<!-- CALENDAR -->
 
 <section class="invitation-message">
 
   <div class="container reveal">
 
-
     <p class="section-tag">
       Save The Date
     </p>
-
 
     <h2 class="section-title">
       13 June 2027
     </h2>
 
-
     <div class="divider"></div>
 
-
     <p class="family-intro">
-
       Add our wedding celebration to your calendar
       and celebrate this special day with us.
-
     </p>
-
 
     <button
       class="btn btn-primary"
@@ -2178,31 +1606,23 @@ footer {
 </section>
 
 
-<!-- =====================================================
-     CLOSING
-===================================================== -->
+<!-- CLOSING -->
 
 <section class="closing-section">
 
   <div class="container reveal">
 
-
     <p class="closing-text">
-
       We look forward to celebrating our most beautiful day
       surrounded by the love, prayers and blessings of our
       family and friends.
-
     </p>
-
 
     <div class="closing-names">
       Fayaz & Alfina
     </div>
 
-
     <div class="divider"></div>
-
 
     <p class="section-tag">
       13 June 2027
@@ -2216,15 +1636,11 @@ footer {
 <!-- FOOTER -->
 
 <footer>
-
   With love, Fayaz & Alfina • Wedding Invitation • 13 June 2027
-
 </footer>
 
 
-<!-- =====================================================
-     MUSIC BUTTON
-===================================================== -->
+<!-- MUSIC BUTTON -->
 
 <button
   class="music-button"
@@ -2236,30 +1652,20 @@ footer {
 </button>
 
 
-<!-- =====================================================
-     MUSIC FILE
-===================================================== -->
+<!-- MUSIC -->
 
 <audio
   id="weddingMusic"
   preload="auto"
-  loop
 >
-
   <source
     src="music.mp3"
     type="audio/mpeg"
   >
-
 </audio>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
-
 
 /* =====================================================
    VARIABLES
@@ -2276,21 +1682,14 @@ let musicPlaying = false;
 
 /* =====================================================
    MUSIC SETTINGS
-
-   MUSIC STARTS AT 4 SECONDS
-   MUSIC STOPS AT 36 SECONDS
 ===================================================== */
 
 const MUSIC_START = 0;
-
 const MUSIC_END = 14;
 
 
 /* =====================================================
    OPEN INVITATION
-
-   Browser policy allows music because this happens
-   after the user's button click.
 ===================================================== */
 
 function openInvitation() {
@@ -2300,13 +1699,9 @@ function openInvitation() {
 
   opening.classList.add("hidden");
 
-
   setTimeout(function() {
-
     opening.style.display="none";
-
   },1000);
-
 
   startMusic();
 
@@ -2321,10 +1716,8 @@ function startMusic() {
 
   music.currentTime = MUSIC_START;
 
-
   const playPromise =
     music.play();
-
 
   if(playPromise !== undefined) {
 
@@ -2338,11 +1731,10 @@ function startMusic() {
         musicButton.innerHTML="♫";
 
       })
-
       .catch(function(error) {
 
         console.log(
-          "Music could not autoplay:",
+          "Music could not play:",
           error
         );
 
@@ -2356,10 +1748,7 @@ function startMusic() {
 
 
 /* =====================================================
-   MUSIC END CONTROL
-
-   When it reaches 36 seconds,
-   return to 4 seconds and continue.
+   MUSIC LOOP
 ===================================================== */
 
 music.addEventListener(
@@ -2395,9 +1784,7 @@ function toggleMusic() {
 
     musicButton.innerHTML="♪";
 
-  }
-
-  else {
+  } else {
 
     if(
       music.currentTime < MUSIC_START ||
@@ -2408,10 +1795,8 @@ function toggleMusic() {
 
     }
 
-
     const playPromise =
       music.play();
-
 
     if(playPromise !== undefined) {
 
@@ -2444,7 +1829,7 @@ function toggleMusic() {
 
 const weddingDate =
   new Date(
-    "June 13, 2027 11:00:00"
+    "June 13, 2027 11:30:00"
   ).getTime();
 
 
@@ -2453,7 +1838,6 @@ function updateCountdown() {
   const now =
     new Date().getTime();
 
-
   const difference =
     weddingDate-now;
 
@@ -2461,11 +1845,8 @@ function updateCountdown() {
   if(difference<=0) {
 
     document.getElementById("days").innerText="0";
-
     document.getElementById("hours").innerText="0";
-
     document.getElementById("minutes").innerText="0";
-
     document.getElementById("seconds").innerText="0";
 
     return;
@@ -2475,16 +1856,14 @@ function updateCountdown() {
 
   const days =
     Math.floor(
-      difference/
-      (1000*60*60*24)
+      difference/(1000*60*60*24)
     );
 
 
   const hours =
     Math.floor(
       (
-        difference%
-        (1000*60*60*24)
+        difference%(1000*60*60*24)
       )/
       (1000*60*60)
     );
@@ -2493,8 +1872,7 @@ function updateCountdown() {
   const minutes =
     Math.floor(
       (
-        difference%
-        (1000*60*60)
+        difference%(1000*60*60)
       )/
       (1000*60)
     );
@@ -2503,8 +1881,7 @@ function updateCountdown() {
   const seconds =
     Math.floor(
       (
-        difference%
-        (1000*60)
+        difference%(1000*60)
       )/
       1000
     );
@@ -2513,14 +1890,11 @@ function updateCountdown() {
   document.getElementById("days").innerText =
     String(days).padStart(2,"0");
 
-
   document.getElementById("hours").innerText =
     String(hours).padStart(2,"0");
 
-
   document.getElementById("minutes").innerText =
     String(minutes).padStart(2,"0");
-
 
   document.getElementById("seconds").innerText =
     String(seconds).padStart(2,"0");
@@ -2538,8 +1912,6 @@ setInterval(
 
 /* =====================================================
    SCROLL REVEAL
-
-   SAME SIMPLE TRANSITION AS ORIGINAL
 ===================================================== */
 
 const revealElements =
@@ -2587,18 +1959,16 @@ revealElements.forEach(
 
 function downloadCalendar() {
 
-
   const calendarContent =
 `BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 SUMMARY:Fayaz & Alfina Wedding - Nikah
-DTSTART:20270613T110000
-DTEND:20270613T130000
+DTSTART:20270613T113000
+DTEND:20270613T133000
 LOCATION:Rajiv Gandhi Auditorium, Edathala, Kerala, India
 DESCRIPTION:Nikah of Fayaz & Alfina
-END:VEVENT
 END:VEVENT
 END:VCALENDAR`;
 
@@ -2636,9 +2006,7 @@ END:VCALENDAR`;
 
 }
 
-
 </script>
-
 
 </body>
 </html>
