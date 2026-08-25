@@ -353,6 +353,21 @@
             background: white;
         }
 
+        .couple-photo-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .couple-photo-link .couple-photo-frame {
+            transition: transform .3s ease, opacity .3s ease;
+        }
+
+        .couple-photo-link:hover .couple-photo-frame {
+            transform: translateY(-3px);
+        }
+
         .couple-photo-frame {
             width: min(430px, 90vw);
             margin: 40px auto 0;
@@ -727,17 +742,112 @@
             font-size: 14px;
         }
 
-        .contact-name {
-            margin-top: 35px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 2.2rem;
+        .rsvp-contacts {
+            max-width: 760px;
+            margin: 38px auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            text-align: left;
         }
 
-        .contact-phone {
+        .rsvp-contact-card {
+            padding: 22px;
+            border: 1px solid rgba(221, 184, 119, .25);
+            background: rgba(255, 255, 255, .04);
+            border-radius: 4px;
+            backdrop-filter: blur(4px);
+        }
+
+        .rsvp-contact-name {
+            margin: 0 0 16px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.55rem;
+            color: #fff;
+        }
+
+        .rsvp-number-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 0;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .rsvp-number-row:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .rsvp-number {
             color: var(--gold-light);
-            margin: 10px 0 30px;
-            font-size: 14px;
+            font-size: 12px;
+            letter-spacing: .8px;
+            line-height: 1.4;
+        }
+
+        .rsvp-actions {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            flex: 0 0 auto;
+        }
+
+        .rsvp-icon-btn {
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(221, 184, 119, .45);
+            border-radius: 50%;
+            color: var(--gold-light);
+            text-decoration: none;
+            transition: all .25s ease;
+        }
+
+        .rsvp-icon-btn:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .rsvp-icon {
+            width: 15px;
+            height: 15px;
+        }
+
+        .rsvp-contact-note {
+            margin-top: 22px;
+            color: rgba(255, 255, 255, .5);
+            font-size: 10px;
             letter-spacing: 1px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .rsvp-contacts {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .rsvp-contact-card {
+                padding: 18px;
+            }
+
+            .rsvp-number {
+                font-size: 10px;
+                letter-spacing: .4px;
+            }
+
+            .rsvp-icon-btn {
+                width: 32px;
+                height: 32px;
+            }
         }
 
 
@@ -825,13 +935,102 @@
            FOOTER
         ========================================= */
 
-        footer {
+        .signature-footer {
+            width: 100%;
             background: #1d1713;
-            color: rgba(255, 255, 255, .5);
             text-align: center;
-            padding: 30px 20px;
+            padding: 28px 20px;
+            box-sizing: border-box;
+        }
+
+        .signature-footer p {
+            margin: 0;
+            color: rgba(255, 255, 255, .70);
+            font-family: "Montserrat", sans-serif;
             font-size: 10px;
-            letter-spacing: 1px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            line-height: 1.9;
+        }
+
+        .signature-footer a {
+            color: var(--gold-light);
+            text-decoration: none;
+            transition: color .3s ease, opacity .3s ease;
+            cursor: pointer;
+        }
+
+        .signature-footer a:hover {
+            color: #ffffff;
+        }
+
+        .signature-footer .footer-wish {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .whatsapp-icon {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            flex: 0 0 auto;
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+            color: rgba(255, 255, 255, .72);
+            vertical-align: middle;
+        }
+
+        .instagram-icon {
+            width: 15px;
+            height: 15px;
+            display: block;
+        }
+
+        .instagram-link:hover {
+            color: var(--gold-light);
+        }
+
+        .signature-footer .footer-credit {
+            display: block;
+        }
+
+        .footer-divider {
+            margin: 0 8px;
+            color: var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            .signature-footer {
+                padding: 22px 15px;
+            }
+
+            .signature-footer p {
+                font-size: 8.5px;
+                letter-spacing: .8px;
+                line-height: 2;
+            }
+
+            .footer-divider {
+                margin: 0 4px;
+            }
+        }
+
+            .signature-footer p {
+                font-size: 9px;
+                letter-spacing: 1px;
+            }
+
+            .footer-divider {
+                margin: 0 5px;
+            }
         }
 
 
@@ -1030,14 +1229,23 @@
                 Fayaz & Alfina
             </h2>
 
-            <div class="couple-photo-frame">
+            <a class="couple-photo-link"
+               href="https://www.instagram.com/feiziii__/"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="View on Instagram"
+               aria-label="View Fayaz & Alfina on Instagram">
 
-                <img src="couple.jpg.png"
-                     class="couple-photo"
-                     alt="Fayaz & Alfina"
-                     onerror="this.parentElement.style.display='none';">
+                <div class="couple-photo-frame">
 
-            </div>
+                    <img src="couple.jpg.png"
+                         class="couple-photo"
+                         alt="Fayaz & Alfina"
+                         onerror="this.parentElement.parentElement.style.display='none';">
+
+                </div>
+
+            </a>
 
         </div>
 
@@ -1493,19 +1701,80 @@
                 these beautiful occasions with you.
             </p>
 
-            <div class="contact-name">
-                Contact
+            <div class="rsvp-contacts">
+            <div class="rsvp-contact-card">
+                <h3 class="rsvp-contact-name">PK Sirajudeen</h3>
+                <div class="rsvp-number-row">
+                    <span class="rsvp-number">+91 92920 14338</span>
+                    <div class="rsvp-actions">
+                        <a class="rsvp-icon-btn" href="tel:+919292014338" aria-label="Call PK Sirajudeen" title="Call PK Sirajudeen"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z"/>
+</svg></a>
+                    </div>
+                </div>                <div class="rsvp-number-row">
+                    <span class="rsvp-number">+971 50 47 54 838</span>
+                    <div class="rsvp-actions">
+                        <a class="rsvp-icon-btn" href="tel:+971504754838" aria-label="Call PK Sirajudeen" title="Call PK Sirajudeen"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z"/>
+</svg></a><a class="rsvp-icon-btn" href="https://wa.me/971504754838?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20wedding%20celebration." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp PK Sirajudeen" title="WhatsApp PK Sirajudeen"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+<path d="M12 2a9.8 9.8 0 0 0-8.47 14.72L2 22l5.42-1.5A9.98 9.98 0 1 0 12 2Zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.22.89.86-3.14-.2-.32A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.1-.51.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.42-.57-.43h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15s.92 2.5 1.05 2.67c.12.17 1.8 2.75 4.37 3.86.61.26 1.09.42 1.46.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.3Z"/>
+</svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rsvp-contact-card">
+                <h3 class="rsvp-contact-name">PK Nishab</h3>
+                <div class="rsvp-number-row">
+                    <span class="rsvp-number">+91 79 02440748</span>
+                    <div class="rsvp-actions">
+                        <a class="rsvp-icon-btn" href="tel:+917902440748" aria-label="Call PK Nishab" title="Call PK Nishab"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z"/>
+</svg></a><a class="rsvp-icon-btn" href="https://wa.me/917902440748?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20wedding%20celebration." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp PK Nishab" title="WhatsApp PK Nishab"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+<path d="M12 2a9.8 9.8 0 0 0-8.47 14.72L2 22l5.42-1.5A9.98 9.98 0 1 0 12 2Zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.22.89.86-3.14-.2-.32A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.1-.51.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.42-.57-.43h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15s.92 2.5 1.05 2.67c.12.17 1.8 2.75 4.37 3.86.61.26 1.09.42 1.46.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.3Z"/>
+</svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rsvp-contact-card">
+                <h3 class="rsvp-contact-name">Adhil Nishab</h3>
+                <div class="rsvp-number-row">
+                    <span class="rsvp-number">+91 62 3511 304</span>
+                    <div class="rsvp-actions">
+                        <a class="rsvp-icon-btn" href="tel:+91623511304" aria-label="Call Adhil Nishab" title="Call Adhil Nishab"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z"/>
+</svg></a><a class="rsvp-icon-btn" href="https://wa.me/91623511304?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20wedding%20celebration." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Adhil Nishab" title="WhatsApp Adhil Nishab"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+<path d="M12 2a9.8 9.8 0 0 0-8.47 14.72L2 22l5.42-1.5A9.98 9.98 0 1 0 12 2Zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.22.89.86-3.14-.2-.32A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.1-.51.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.42-.57-.43h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15s.92 2.5 1.05 2.67c.12.17 1.8 2.75 4.37 3.86.61.26 1.09.42 1.46.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.3Z"/>
+</svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rsvp-contact-card">
+                <h3 class="rsvp-contact-name">Fayaz Sirajudeen</h3>
+                <div class="rsvp-number-row">
+                    <span class="rsvp-number">+91 90 377 44243</span>
+                    <div class="rsvp-actions">
+                        <a class="rsvp-icon-btn" href="tel:+919037744243" aria-label="Call Fayaz Sirajudeen" title="Call Fayaz Sirajudeen"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z"/>
+</svg></a><a class="rsvp-icon-btn" href="https://wa.me/919037744243?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20wedding%20celebration." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Fayaz Sirajudeen" title="WhatsApp Fayaz Sirajudeen"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+<path d="M12 2a9.8 9.8 0 0 0-8.47 14.72L2 22l5.42-1.5A9.98 9.98 0 1 0 12 2Zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.22.89.86-3.14-.2-.32A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.1-.51.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.42-.57-.43h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15s.92 2.5 1.05 2.67c.12.17 1.8 2.75 4.37 3.86.61.26 1.09.42 1.46.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.3Z"/>
+</svg></a>
+                    </div>
+                </div>                <div class="rsvp-number-row">
+                    <span class="rsvp-number">+971 56 630 1609</span>
+                    <div class="rsvp-actions">
+                        <a class="rsvp-icon-btn" href="tel:+971566301609" aria-label="Call Fayaz Sirajudeen" title="Call Fayaz Sirajudeen"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92z"/>
+</svg></a><a class="rsvp-icon-btn" href="https://wa.me/971566301609?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20wedding%20celebration." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Fayaz Sirajudeen" title="WhatsApp Fayaz Sirajudeen"><svg class="rsvp-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+<path d="M12 2a9.8 9.8 0 0 0-8.47 14.72L2 22l5.42-1.5A9.98 9.98 0 1 0 12 2Zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.22.89.86-3.14-.2-.32A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.1-.51.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.42-.57-.43h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15s.92 2.5 1.05 2.67c.12.17 1.8 2.75 4.37 3.86.61.26 1.09.42 1.46.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.3Z"/>
+</svg></a>
+                    </div>
+                </div>
+            </div>
             </div>
 
-            <div class="contact-phone">
-                +91 79024 40748
-            </div>
-
-            <a href="https://wa.me/917902440748?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20RSVP%20for%20Fayaz%20%26%20Alfina%27s%20Wedding%20Celebration."
-               target="_blank"
-               class="btn btn-primary">
-                RSVP on WhatsApp
-            </a>
+            <p class="rsvp-contact-note">
+                Tap the phone icon to call or the WhatsApp icon to send your RSVP.
+            </p>
 
         </div>
 
@@ -1591,8 +1860,47 @@
          FOOTER
     ========================================= -->
 
-    <footer>
-        With love, Fayaz & Alfina • Wedding Celebration • 11, 12 & 13 June 2027
+    <footer class="signature-footer">
+        <p>
+            <a class="footer-wish"
+               href="https://wa.me/971566301609?text=Assalamu%20Alaikum%2C%20Fayaz%21%20First%20and%20foremost%2C%20I%20extend%20my%20heartfelt%20wishes%20and%20prayers%20to%20you%20in%20the%20blessed%20name%20of%20Allah.%20May%20Allah%20bless%20your%20marriage%20with%20love%2C%20happiness%2C%20barakah%2C%20and%20endless%20blessings.%20Wishing%20you%20a%20beautiful%20and%20blessed%20new%20journey%20ahead.%20%F0%9F%A4%8D"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Wish the Groom on WhatsApp">
+                <svg class="whatsapp-icon"
+                     viewBox="0 0 24 24"
+                     aria-hidden="true"
+                     fill="currentColor">
+                    <path d="M12 2a9.8 9.8 0 0 0-8.47 14.72L2 22l5.42-1.5A9.98 9.98 0 1 0 12 2Zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.22.89.86-3.14-.2-.32A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.1-.51.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.42-.57-.43h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15s.92 2.5 1.05 2.67c.12.17 1.8 2.75 4.37 3.86.61.26 1.09.42 1.46.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.3Z"/>
+                </svg>
+                Wish the Groom on Click
+            </a>
+
+            <span class="footer-credit">
+                With love, Fayaz &amp; Alfina
+                <span class="footer-divider">—</span>
+                This website is developed &amp; owned by Fayaz Sirajudeen.
+                <a class="instagram-link"
+                   href="https://www.instagram.com/feiziii__/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="Follow Fayaz Sirajudeen on Instagram"
+                   aria-label="Instagram">
+                    <svg class="instagram-icon"
+                         viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </p>
     </footer>
 
 
